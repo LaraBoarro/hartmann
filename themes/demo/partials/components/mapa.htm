@@ -1,0 +1,30 @@
+[builderList builderListMapa]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set recordsMapa = builderListMapa.records %}
+{% set displayColumn = builderListMapa.displayColumn %}
+{% set noRecordsMessage = builderListMapa.noRecordsMessage %}
+{% set detailsPage = builderListMapa.detailsPage %}
+{% set detailsKeyColumn = builderListMapa.detailsKeyColumn %}
+{% set detailsUrlParameter = builderListMapa.detailsUrlParameter %}
+
+
+    {% for mapa in recordsMapa %}
+       
+   
+
+<div id="page-content">
+  <div class="header-background height-400px">
+    <div id="big-map">
+    {{mapa.mapinha | raw}}
+    </div>
+  </div>
+</div>
+ {% endfor %}

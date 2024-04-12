@@ -1,0 +1,24 @@
+fields:
+    titulo:
+        label: 'Titulo ou Nome (Pessoa / empresa / cliente)'
+        span: auto
+        type: text
+    subtitulo:
+        label: 'Subtitulo ou  Comentario'
+        span: auto
+        type: text
+    descricao:
+        label: 'Descriçaõ do comentario'
+        span: auto
+        type: text
+    comentario_foto:
+        label: 'Foto (Pessoa / empresa / cliente)'
+        mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

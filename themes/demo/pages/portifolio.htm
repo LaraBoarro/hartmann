@@ -1,0 +1,38 @@
+title = "Portifolio"
+url = "/portifolio/:page?"
+layout = "portfolio"
+is_hidden = 0
+
+[builderList builderListportfolio]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set portfolio = builderListportfolio.records %}
+{% set displayColumn = builderListportfolio.displayColumn %}
+{% set noRecordsMessage = builderListportfolio.noRecordsMessage %}
+{% set detailsPage = builderListportfolio.detailsPage %}
+{% set detailsKeyColumn = builderListportfolio.detailsKeyColumn %}
+{% set detailsUrlParameter = builderListportfolio.detailsUrlParameter %}
+
+    {% for portfolioPage in portfolio %}
+    
+<!--end page-header-->
+<div id="page-content">
+  <div class="header-background bg-transfer overlay bg-fixed">
+    <div class="container">
+      <div class="title">
+        <h1>{{ this.page.title }}</h1>
+      </div>
+    </div>
+    <img src="{{portfolioPage.bannerportfolio.path}}" alt="" />
+  </div>
+  <!--end header-background--> {% endfor %}
+  
+{% partial 'components/Portfolio' %}
+</div>

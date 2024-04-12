@@ -1,0 +1,13 @@
+columns:
+    id:
+        label: id
+        type: number
+        searchable: true
+    nome:
+        label: nome
+        type: text
+        searchable: true
+    slug:
+        label: slug
+        type: text
+        searchable: true

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Winter CMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="Winter CMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/hartmannmobile.png'|theme }}">
+        <link href="{{ 'assets/css/fonts/font-awesome.css'|theme }}" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,700' rel='stylesheet' type='text/css'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link href="{{ 'assets/bootstrap/css/bootstrap.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/owl.carousel.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/maginific-popup.css'|theme }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        {% styles %}
+    </head>
+    <body>
+<div class="outer-wrapper">
+    <div class="page-wrapper">
+            <!-- Header -->
+            {% partial 'site/header' %}
+            <!-- Header -->
+            
+        <!-- Content -->
+        <section>
+            {% page %}
+        </section>
+        <!-- Content -->
+            <!-- Footer -->
+            {% partial 'site/footer' %}
+            <!-- Footer -->
+        <!-- or -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+        <!-- Scripts -->
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <script src="{{ 'assets/javascript/jquery-2.2.1.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/jquery-migrate-1.2.1.min.js'|theme }}"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
+        <script src="{{ 'assets/bootstrap/js/bootstrap.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/jquery.validate.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/owl.carousel.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/waypoints.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/scrollReveal.min.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/isotop.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/jquery.magnific-popup.min.js'|theme }}"></script>
+        <!-- Scripts -->
+        <script src="{{ 'assets/javascript/custom.js'|theme }}"></script>
+        <script src="{{ 'assets/javascript/filter.js'|theme }}"></script>
+            
+        
+        {% snowboard all %}
+        {% scripts %}
+    </div>
+    <!--end page-wrapper-->
+</div>
+    </body>
+</html>

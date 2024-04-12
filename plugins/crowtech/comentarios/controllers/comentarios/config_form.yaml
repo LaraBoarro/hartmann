@@ -1,0 +1,10 @@
+name: Comentarios
+form: $/crowtech/comentarios/models/comentarios/fields.yaml
+modelClass: Crowtech\Comentarios\Models\Comentarios
+defaultRedirect: crowtech/comentarios/comentarios
+create:
+    redirect: 'crowtech/comentarios/comentarios/update/:id'
+    redirectClose: crowtech/comentarios/comentarios
+update:
+    redirect: crowtech/comentarios/comentarios
+    redirectClose: crowtech/comentarios/comentarios

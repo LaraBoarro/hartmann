@@ -1,0 +1,11 @@
+plugin:
+    name: 'crowtech.clientes::lang.plugin.name'
+    description: 'crowtech.clientes::lang.plugin.description'
+    author: crowtech
+    icon: oc-icon-street-view
+    homepage: ''
+navigation:
+    main-menu-item-Clientes:
+        label: Clientes
+        url: crowtech/clientes/clientes/update/9
+        icon: icon-child

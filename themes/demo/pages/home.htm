@@ -1,0 +1,24 @@
+title = "Home"
+url = "/"
+layout = "portfolio"
+is_hidden = 0
+==
+<div class="outer-wrapper homepage">
+  <div class="page-wrapper">
+       <div id="page-content">
+    {% partial 'componets/teste' %}
+    {% partial 'components/frase' %}
+          <!--end hero-section-->
+         {% partial 'components/sliderhome' %}
+          <!--end block-->
+            {% partial 'components/blog' %}
+                  <!--end title-->
+                {% partial 'components/equipehome' %}  
+              </div>
+              <!--end container-->
+          </div>
+          <!--end block-->
+        {% partial 'components/clientes' %}
+      <!--end page-content-->
+  </div>
+</div>

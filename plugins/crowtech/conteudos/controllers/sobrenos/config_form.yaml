@@ -1,0 +1,10 @@
+name: Sobrenos
+form: $/crowtech/conteudos/models/sobrenos/fields.yaml
+modelClass: Crowtech\Conteudos\Models\Sobrenos
+defaultRedirect: crowtech/conteudos/sobrenos
+create:
+    redirect: 'crowtech/conteudos/sobrenos/update/:id'
+    redirectClose: crowtech/conteudos/sobrenos
+update:
+    redirect: crowtech/conteudos/sobrenos
+    redirectClose: crowtech/conteudos/sobrenos

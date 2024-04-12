@@ -1,0 +1,60 @@
+[builderList]
+modelClass = "Crowtech\Numeros\Models\Numeros"
+scope = "-"
+scopeValue = 1
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set numeros = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+
+    {% for numerosHome in numeros %}
+
+
+<!-- ==================== Start numbers ==================== -->
+
+        <section class="number-sec section-padding sub-bg">
+            <div class="container">
+                <div class="row alionharCentroMobile">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item no-bord alinhamentoText Xpp">
+                            <span class="icon pe-7s-smile"></span>
+                            <h2 class="custom-font">+<span class="counter" data-count="{{numerosHome.anos}}">+0</span></h2>
+                            <p class="wow txt" data-splitting>Anos de Experiência</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item alinhamentoText bag">
+                            <span class="icon pe-7s-portfolio"></span>
+                            <h2 class="custom-font">+<span class="counter" data-count="{{numerosHome.projetos}}">+0</span></h2>
+                            <p class="wow txt" data-splitting>Projetos Elaborados</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item alinhamentoText people">
+                            <span class="icon pe-7s-coffee"></span>
+                            <h2 class="custom-font">+<span class="counter" data-count="{{numerosHome.clientes}}">+0</span></h2>
+                            <p class="wow txt" data-splitting>Clientes</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item alinhamentoText smile">
+                            <span class="icon pe-7s-medal"></span>
+                            <h2 class="custom-font"><span class="counter" data-count="{{numerosHome.porcentagem}}">+0</span>%</h2>
+                            <p class="wow txt" data-splitting>Dos Clientes Satisfeitos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== End numbers ==================== -->
+        {% endfor %}

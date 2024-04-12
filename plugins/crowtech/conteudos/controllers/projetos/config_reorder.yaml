@@ -1,0 +1,5 @@
+title: Projetos
+modelClass: Crowtech\Conteudos\Models\Projeto
+nameFrom: nome
+toolbar:
+    buttons: reorder_toolbar

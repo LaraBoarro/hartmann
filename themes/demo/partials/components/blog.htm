@@ -1,0 +1,48 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "categoria"
+postPage = "post"
+==
+<div class="block">
+  <div class="container">
+    <div class="section-title">
+      <a href="{{'blog'| page}}">
+        <h2>Notícias Recentes</h2>
+      </a>
+    </div>
+    <!--end title-->
+    <div class="featured-blocks">
+      <div class="row">
+        {% set posts = blogPosts.posts %} {% for post in posts %}
+
+        <div class="col-md-4 col-sm-12">
+          <div class="featured-block">
+            <div class="date">
+              <a href="{{ post.url }}">
+                <img src="{{post.featured_images[0].path|resize(600,400, {mode:'crop'})}}" alt="" class="img-fluide" />
+              </a>
+            </div>
+            <!--end date-->
+            <div class="blogTextHome">
+              <a href="{{ post.url }}">
+                <h3>{{ post.title }}</h3>
+              </a>
+              <p>{{ html_limit(post.summary|raw, 120) }}</p>
+            </div>
+            <!--end desciption-->
+          </div>
+          <!--end featured-block-->
+        </div>
+        {% endfor %}
+        <!--end col-md-4-->
+        <!--end col-md-4-->
+      </div>
+      <!--end row-->
+    </div>
+    <!--end featured-blocks-->
+  </div>
+  <!--end container-->
+</div>

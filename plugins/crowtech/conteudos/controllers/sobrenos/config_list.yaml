@@ -1,0 +1,12 @@
+list: $/crowtech/conteudos/models/sobrenos/columns.yaml
+modelClass: Crowtech\Conteudos\Models\Sobrenos
+title: Sobrenos
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'crowtech/conteudos/sobrenos/update/:id'

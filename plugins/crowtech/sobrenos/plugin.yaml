@@ -1,0 +1,11 @@
+plugin:
+    name: 'crowtech.sobrenos::lang.plugin.name'
+    description: 'crowtech.sobrenos::lang.plugin.description'
+    author: crowtech
+    icon: oc-icon-group
+    homepage: ''
+navigation:
+    main-menu-item-sobre:
+        label: 'Sobre nós'
+        url: crowtech/sobrenos/sobre/update/1
+        icon: icon-group

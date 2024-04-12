@@ -1,0 +1,45 @@
+[builderList projetos]
+modelClass = "Crowtech\Conteudos\Models\Projeto"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderDetails infos]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+identifierValue = 1
+modelKeyColumn = "id"
+displayColumn = "id"
+notFoundMessage = "Registro não encontrado"
+==
+<section class="d-flex" style="padding-top: 75px;">
+    <div class="aside">
+        <div class="redes-socials">
+            {% set infos = infos.record %}
+            <ul>
+                <li><a href="{{ infos.linkinsta }}" target="_blank"><i class="ui-instagram"></i></a></li>
+				<li><a href="{{ infos.linkface }}" target="_blank"><i class="ui-facebook"></i></a></li>
+				<li><a href="{{ infos.linknumeroum }}" target="_blank"><i class="ui-whatsapp"></i></a></li>
+            </ul>
+        </div>
+        <div class="copy">
+            <p style="writing-mode: vertical-lr;">© Hartman</p>
+        </div>
+    </div>
+    <div class="owlprojectsinit owl-carousel owl-theme">
+        {% set projetos = projetos.records %}
+        {% for projeto in projetos %}
+            <div class="item">
+                <a href="/projeto/{{projeto.slug}}" class="card-slider-init" style="background-image:url({{projeto.imagemprincipal|media}});">
+                    <div class="content">
+                        <p style="color: #d9d9d9;text-transform: uppercase;">{{ projeto.localizacao }}</p>
+                        <h2>{{projeto.nome}}</h2>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</section>

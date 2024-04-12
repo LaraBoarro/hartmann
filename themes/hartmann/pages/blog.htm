@@ -1,0 +1,64 @@
+title = "Blog"
+url = "/blog/:page?"
+layout = "default"
+is_hidden = 0
+
+[builderDetails infos]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+identifierValue = 1
+modelKeyColumn = "id"
+displayColumn = "id"
+notFoundMessage = "Registro não encontrado"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 9
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog"
+postPage = "blog"
+==
+{% set infos = infos.record %}
+{% partial 'componentes/breadcrumb' infos=infos.bannerblog %}
+
+{% set posts = blogPosts.posts %}
+<!-- Partners -->
+<div class="partners bg-light">
+	<div class="container">
+	    <div class="row">
+	        {% for post in posts %}
+	        <div class="col-sm-6 col-md-4 col-lg-3">
+	            <a href="/post/{{ post.slug }}" class="card_post">
+	                <div class="box_img_blog" style="background-image: url({{post.featured_images[0].path}});"></div>
+	                <p class="date_post">{{post.published_at.format('d M, Y')}}</p>
+	                <p class="title_post">{{ post.title }}</p>
+	            </a>
+	        </div>
+	        {% endfor %}
+	    </div>
+        <div class="row justify-content-center">
+            
+            {% if posts.lastPage > 1 %}
+            <!-- Pagination -->
+			<nav class="pagination">
+			    {% if posts.currentPage > 1 %}
+			        <a href="#" class="next page-numbers"><i class="ui-arrow-left"></i></a>
+			    {% endif %}
+			    
+			    {% for page in 1..posts.lastPage %}
+			        {% if posts.currentPage == page %}
+			            <span aria-current="page" class="page-numbers current">{{ page }}</span>
+			        {% else %}
+			            <a href="{{ this.page.baseFileName | page({ (blogPosts.pageParam): page }) }}" class="page-numbers">{{ page }}</a>
+			        {% endif %}
+			    {% endfor %}
+			    
+			    {% if posts.lastPage > posts.currentPage %}
+				    <a href="{{ this.page.baseFileName | page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}" class="next page-numbers"><i class="ui-arrow-right"></i></a>
+				{% endif %}
+			</nav>
+            {% endif %}
+
+        </div>
+	</div>
+</div>

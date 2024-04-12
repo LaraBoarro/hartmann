@@ -1,0 +1,50 @@
+title = "Sobre nós"
+url = "/sobre-nos"
+layout = "default"
+is_hidden = 0
+
+[builderList equipe]
+modelClass = "Crowtech\Equipe\Models\Equipe"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderDetails infos]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+identifierValue = 1
+modelKeyColumn = "id"
+displayColumn = "id"
+notFoundMessage = "Registro não encontrado"
+==
+{% set infos = infos.record %}
+{% partial 'componentes/breadcrumb' infos=infos.bannernos %}
+
+<section class="section-wrap pt-72 pb-72 pb-lg-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="title-row">
+        			<h2 class="section-title">Nossos Especialistas</h2>
+        			<p>Uma equipe de especialistas é o coração pulsante da excelência, onde talentos únicos convergem em harmonia, desvendando desafios com maestria e elevando o resultado a um patamar extraordinário.</p>
+        		</div>	
+            </div>
+            
+            {% set equipe = equipe.records %}
+            {% for colaborador in equipe %}
+            <div class="col-6 col-lg-3">
+                <img src="{{colaborador.foto_pessoa.path}}" class="w-100" alt="">
+                <h6 class="mb-0 pt-16">{{colaborador.titulo}}</h6>
+                <p style="font-size: .8rem;color: var(--cor-padrao);line-height: 16px;padding-top: 5px;">{{colaborador.cargo}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% partial 'componentes/intro' %}
+
+{% partial 'componentes/parceiros' %}

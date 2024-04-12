@@ -1,0 +1,112 @@
+tabs:
+    fields:
+        titulo:
+            label: 'Quem Somos (Titulo no topo da página)'
+            span: auto
+            type: text
+            tab: 'Quem Somos'
+        textooquefazemos:
+            label: 'Texto o que Fazemos (seção de categorias)'
+            span: auto
+            type: text
+            tab: 'Quem Somos'
+        titulooquefazemos:
+            label: 'Titulo o que Fazemos (Seção de Categorias)'
+            span: auto
+            type: text
+            tab: 'Quem Somos'
+        textoum:
+            label: 'Texto sobre Quem Somos (Topo da página)'
+            size: ''
+            span: auto
+            type: richeditor
+            tab: 'Quem Somos'
+        jose_foto:
+            label: 'Foto do José Henrique Hartmann de Carvalho'
+            mode: image
+            imageWidth: '250'
+            imageHeight: '250'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Jose Henrique'
+        titutlodois:
+            label: 'José Henrique de Carvalho (Título)'
+            span: auto
+            type: text
+            tab: 'Jose Henrique'
+        detalhejose:
+            label: 'Texto Secundario sobre José Henrique de Carvalho'
+            size: ''
+            span: auto
+            type: richeditor
+            tab: 'Jose Henrique'
+        textojose:
+            label: 'Texto Sobre José Henrique de Carvalho'
+            size: ''
+            span: auto
+            type: richeditor
+            tab: 'Jose Henrique'
+        textoiconeum:
+            label: 'Texto 01 icone'
+            span: auto
+            type: text
+            tab: Icones
+        textoiconedois:
+            label: 'Texto 02 icone'
+            span: auto
+            type: text
+            tab: Icones
+        textoiconetres:
+            label: 'Texto 03 icone'
+            span: auto
+            type: text
+            tab: Icones
+        tituloiconedois:
+            label: 'Titulo 02 icone'
+            span: auto
+            type: text
+            tab: Icones
+        tituloiconetres:
+            label: 'Titulo 03 icone'
+            span: auto
+            type: text
+            tab: Icones
+        tituloiconeum:
+            label: 'Titulo 01 icone'
+            span: auto
+            type: text
+            tab: Icones
+        icone_um:
+            label: 'Icone 01'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Icones
+        icone_dois:
+            label: 'Icone 02'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Icones
+        icone_tres:
+            label: 'Icone 03'
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Icones

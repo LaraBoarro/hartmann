@@ -1,0 +1,174 @@
+[builderList builderListSobrenoss]
+modelClass = "Crowtech\SobreNos\Models\Sobre"
+scope = "-"
+scopeValue = "id"
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set sobre = builderListSobrenoss.records %}
+{% set displayColumn = builderListSobrenoss.displayColumn %}
+{% set noRecordsMessage = builderListSobrenoss.noRecordsMessage %}
+{% set detailsPage = builderListSobrenoss.detailsPage %}
+{% set detailsKeyColumn = builderListSobrenoss.detailsKeyColumn %}
+{% set detailsUrlParameter = builderListSobrenoss.detailsUrlParameter %}
+
+
+    {% for sobrenos in sobre %}
+
+
+<div class="fundocinzapages">
+  <div class="block">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2><strong>{{sobrenos.titulo}}</strong></h2>
+        </div>
+        <!--end col-md-4-->
+        <div class="col-md-8">
+          <p>
+   {{sobrenos.textoum | raw}}
+          </p>
+     
+          <div class="separator"></div>
+          <!--end separator-->
+        </div>
+        <!--end col-md-8-->
+      </div>
+      <!--end row-->
+    </div>
+    <!--end container-->
+  </div>
+  <!--end block-->
+ </div>
+  <div class="block">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2><strong>A Equipe</strong></h2>
+        </div>
+        <!--end col-md-4-->
+        <div class="col-md-12">
+          <div class="row">
+          {% partial 'components/equipe' %}
+          </div>
+          <!--end row-->
+        </div>
+        <!--end col-md-8-->
+      </div>
+      <!--end row-->
+    </div>
+    <!--end container-->
+  </div>
+  <!--end block-->
+<div class="JoseCampo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img class="imagemjose" src="{{sobrenos.jose_foto.path}}" alt="">
+                <hr class="hrJose"/>
+                <p class="textoJose larguradetalhe">{{sobrenos.detalhejose | raw}}</p>
+            </div>
+            <div class="col">
+            <h2 class="textoJose">{{sobrenos.titutlodois}}</h2>
+            <hr class="hrJose"/>
+                <p class="textoJose larguratexto">{{sobrenos.textojose | raw}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="CampoIcones">
+  <div class="container">
+    <div class="row justificar">
+      <div class="col-md-3 espaco">
+        <img class="imagemicone" src="{{sobrenos.icone_um.path}}" alt="" />
+        <h4>{{sobrenos.tituloiconeum}}</h4>
+        <p>{{sobrenos.textoiconeum}}</p>
+      </div>
+      <div class="col-md-3 espaco">
+        <img class="imagemicone" src="{{sobrenos.icone_dois.path}}" alt="" />
+        <h4>{{sobrenos.tituloiconedois}}</h4>
+        <p>{{sobrenos.textoiconedois}}</p>
+      </div>
+      <div class="col-md-3 espaco">
+        <img class="imagemicone" src="{{sobrenos.icone_tres.path}}" alt="" />
+        <h4>{{sobrenos.tituloiconetres}}</h4>
+        <p>{{sobrenos.textoiconetres}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="block stick-to-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2><strong>{{sobrenos.titulooquefazemos}}</strong></h2>
+          <p>{{sobrenos.textooquefazemos}}</p>
+        </div>
+        <div class="col-md-8">
+          <div class="time-line">
+            <div class="time-line-item">
+              <div class="date"></div>
+             <p><a href="/portifolio/categoria/edificios-comerciais">Edificios Comerciais</a></p>
+            </div>
+            <!--end time-line-item-->
+            <div class="time-line-item">
+              <div class="date"></div>
+            <p><a href="/portifolio/categoria/edificios-residenciais">Edificios Residenciais</a></p>
+            </div>
+            <!--end time-line-item-->
+            <div class="time-line-item">
+              <div class="date"></div>
+             <p><a href="/portifolio/categoria/edificios-institucionais">Edificios Institucionais</a></p>
+            </div>
+            <div class="time-line-item">
+              <div class="date"></div>
+            <p><a href="/portifolio/categoria/edificios-horizontais">Edificios Horizontais</a></p>
+            </div>
+            <div class="time-line-item">
+              <div class="date"></div>
+             <p><a href="/portifolio/categoria/residenciais">Residenciais</a></p>
+            </div>
+                <div class="time-line-item">
+              <div class="date"></div>
+             <p><a href="/portifolio/categoria/igrejas">Igrejas</a></p>
+            </div>
+                <div class="time-line-item">
+              <div class="date"></div>
+             <p><a href="/portifolio/categoria/industrias">Industrias</a></p>
+            </div>
+                <div class="time-line-item">
+              <div class="date"></div>
+           <p> <a href="/portifolio/categoria/clinicas-medicas">Clinicas Medicas</a></p>
+            </div>
+                <div class="time-line-item">
+              <div class="date"></div>
+           <p> <a href="/portifolio/categoria/parques-tematicos-e-turisticos">Parques temáticos e Turísticos</a></p>
+            </div>
+                <div class="time-line-item">
+              <div class="date"></div>
+            <p><a href="/portifolio/categoria/restauracoes-de-patrimonio-historicos">Restauracões de patrimonio historicos</a></p>
+            </div>
+                <div class="time-line-item">
+              <div class="date"></div>
+            <p> <a href="/portifolio">Entre outros...</a></p>
+            </div>
+            <!--end time-line-item-->
+          </div>
+          <!--end time-line-->
+        </div>
+        <!--end col-md-8-->
+      </div>
+      <!--end row-->
+    </div>
+    <!--end container-->
+    <div class="bg black opacity-2"></div>
+    <!--end bg-->
+  </div>
+  <!--end block-->
+
+</div>
+    {% endfor %}

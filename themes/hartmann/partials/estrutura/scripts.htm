@@ -1,0 +1,70 @@
+<!-- jQuery Scripts -->
+<script src="{{['assets/js/jquery.min.js',
+                'assets/js/jquery.min.js',
+                'assets/js/bootstrap.min.js',
+                'assets/js/plugins.js',
+                'assets/revolution/js/jquery.themepunch.tools.min.js',
+                'assets/revolution/js/jquery.themepunch.revolution.min.js',
+                'assets/js/rev-slider.js',
+                'assets/js/scripts.js',
+                'assets/owlcarousel/owl.carousel.min.js']|theme}}"></script>
+
+<!-- Rev Slider Offline Scripts -->
+<script src="{{['assets/revolution/js/extensions/revolution.extension.video.min.js',
+                'assets/revolution/js/extensions/revolution.extension.carousel.min.js',
+                'assets/revolution/js/extensions/revolution.extension.slideanims.min.js',
+                'assets/revolution/js/extensions/revolution.extension.actions.min.js',
+                'assets/revolution/js/jquery.themepunch.tools.min.js',
+                'assets/revolution/js/extensions/revolution.extension.layeranimation.min.js',
+                'assets/revolution/js/extensions/revolution.extension.kenburn.min.js',
+                'assets/revolution/js/extensions/revolution.extension.navigation.min.js',
+                'assets/revolution/js/extensions/revolution.extension.migration.min.js',
+                'assets/revolution/js/extensions/revolution.extension.parallax.min.js']|theme}}"></script>
+                
+{% framework extras %}
+{% scripts %}
+ 
+<script>
+    
+    const toggleMenu = () => document.body.classList.toggle("open");
+
+    $('.owlprojectsinit').owlCarousel({
+        loop:true,
+        nav:true,
+        dots: false,
+        autoplay:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:4
+            },
+            2000:{
+                items:5
+            }
+        }
+    });
+
+    $('.owl-parceiros').owlCarousel({
+        loop:true,
+        margin:30,
+        nav:true,
+        center: true,
+        autoplay:true,
+        responsive:{
+            0:{
+                items:2
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    });
+</script>

@@ -1,0 +1,4 @@
+title: Comentarios
+modelClass: Crowtech\Comentarios\Models\Comentarios
+toolbar:
+    buttons: reorder_toolbar

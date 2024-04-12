@@ -1,0 +1,97 @@
+title = "Projeto"
+url = "/projeto/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails builderDetailsProjeto]
+modelClass = "Crowtech\Portfolio\Models\Portfolio"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "id"
+notFoundMessage = "Registro não encontrado"
+==
+{% set projeto = builderDetailsProjeto.record %}
+{% set displayColumn = builderDetailsProjeto.displayColumn %}
+{% set notFoundMessage = builderDetailsProjeto.notFoundMessage %}
+
+<!--end page-header-->
+
+<div id="page-content">
+  <div class="header-background bg-transfer overlay bg-fixed">
+    <div class="container">
+      <div class="title">
+        <h1>{{projeto.titulo}}</h1>
+      </div>
+    </div>
+    <img src="{{projeto.bannerprojeto.path}}" alt="" />
+  </div>
+  <!--end header-background-->
+  <div class="fundocinzapages">
+    <div class="work-detail">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="left">
+              <div class="title framed shadow">
+                <h2>{{projeto.titulo}}</h2>
+                <div class="separator"></div>
+                <h3>{{projeto.cidade}}</h3>
+              </div>
+              <dl class="info">
+                <dt>NOME</dt>
+                <dd>{{projeto.titulo}}</dd>
+                <dt>TIPOLOGIA</dt>
+                <dd>{{projeto.categoria.name}}</dd>
+                <dt>AREA TOTAL</dt>
+                <dd>{{projeto.area}}</dd>
+                <dt>ANO DE CONSTRUÇÃO</dt>
+                <dd>{{projeto.ano}}</dd>
+                <dt>CIDADE</dt>
+                <dd>{{projeto.cidade}}</dd>
+              </dl>
+              <div class="separator"></div>
+              <div class="tags">
+                <span class="tag">{{projeto.detalhe}}</span>
+              </div>
+              <p>{{projeto.descricao|raw}}</p>
+              <div class="separator"></div>
+              <a href="{{'contato'| page}}" class="">Quer um projeto exclusivo? Contate-nos!
+                <i class="fa fa-arrow-right iconeArrow" aria-hidden="true"></i></a></br>
+              <a class="voltarPortfolio" href="{{ 'portifolio'|page }}"> Voltar ao Portfolio</a>
+            </div>
+            <!--end left-->
+          </div>
+          <div class="col-md-8 justificarCarouselProjeto">
+            <div class="row bord">
+              <div class="col-md-12 col-12 brands justificarCarouselProjeto">
+                <span class="popup-multi-gallery gradient-border-bottom">
+                  <div class="featured-projeto-carouseel">
+                    {% for image in record.galeria %}
+                    <div class="popup-multi-gallery">
+                      <div class="slide gallery-row">
+                        <a href="{{image.path}}" class="lightbox-item mr-20">
+                        <div class="imageslide" style="background:url({{image.path}}) !important;background-repeat: no-repeat !important; background-size: cover !important; background-position: bottom !important;">
+                          <img class="imagemslide" src="{{image.path}}" alt="imagem" />
+                        </div>  
+                      </div>
+                      </a>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end right-->
+      </div>
+      <!--end col-md-8-->
+    </div>
+    <!--end container-->
+    <!--end block-->
+
+    <hr />
+
+    {% partial 'components/blog' %}
+    <!--end block-->
+  </div>

@@ -1,0 +1,4 @@
+title: Clientes
+modelClass: Crowtech\Clientes\Models\Clientes
+toolbar:
+    buttons: reorder_toolbar

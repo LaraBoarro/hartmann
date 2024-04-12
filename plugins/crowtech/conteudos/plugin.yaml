@@ -1,0 +1,24 @@
+plugin:
+    name: 'crowtech.conteudos::lang.plugin.name'
+    description: 'crowtech.conteudos::lang.plugin.description'
+    author: crowtech
+    icon: oc-icon-align-center
+    homepage: ''
+navigation:
+    main-conteudo-item:
+        label: 'Conteúdos do Site'
+        url: crowtech/conteudos/sobrenos/update/1
+        icon: icon-align-center
+        sideMenu:
+            side-sobrenos-item:
+                label: 'Sobre nós'
+                url: crowtech/conteudos/sobrenos/update/1
+                icon: icon-group
+            side-slider-item:
+                label: Projetos
+                url: crowtech/conteudos/projetos
+                icon: icon-cubes
+            side-categorias-item:
+                label: 'Categorias de projeto'
+                url: crowtech/conteudos/categorias
+                icon: icon-tags

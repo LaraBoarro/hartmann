@@ -1,0 +1,4 @@
+title: Sobre
+modelClass: Crowtech\SobreNos\Models\Sobre
+toolbar:
+    buttons: reorder_toolbar

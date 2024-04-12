@@ -1,0 +1,10 @@
+name: Sobre
+form: $/crowtech/sobrenos/models/sobre/fields.yaml
+modelClass: Crowtech\SobreNos\Models\Sobre
+defaultRedirect: crowtech/sobrenos/sobre
+create:
+    redirect: 'crowtech/sobrenos/sobre/update/:id'
+    redirectClose: crowtech/sobrenos/sobre
+update:
+    redirect: crowtech/sobrenos/sobre
+    redirectClose: crowtech/sobrenos/sobre

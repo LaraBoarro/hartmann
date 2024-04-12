@@ -1,0 +1,10 @@
+name: Projetos
+form: $/crowtech/conteudos/models/projeto/fields.yaml
+modelClass: Crowtech\Conteudos\Models\Projeto
+defaultRedirect: crowtech/conteudos/projetos
+create:
+    redirect: 'crowtech/conteudos/projetos/update/:id'
+    redirectClose: crowtech/conteudos/projetos
+update:
+    redirect: crowtech/conteudos/projetos
+    redirectClose: crowtech/conteudos/projetos

@@ -1,0 +1,134 @@
+[2023-03-07 13:56:31+00:00] INFO: Installer API request received {"method":"GET","endpoint":"checkApi"} 
+[2023-03-07 13:56:31+00:00] INFO: Installer API request received {"method":"GET","endpoint":"checkPhpExtensions"} 
+[2023-03-07 13:56:31+00:00] NOTICE: Trying Winter CMS API  
+[2023-03-07 13:56:31+00:00] NOTICE: Checking PHP "curl" extension  
+[2023-03-07 13:56:31+00:00] NOTICE: Checking PHP "json" extension  
+[2023-03-07 13:56:31+00:00] NOTICE: Checking PHP "pdo" extension  
+[2023-03-07 13:56:31+00:00] NOTICE: Checking PHP "zip" extension  
+[2023-03-07 13:56:31+00:00] NOTICE: Checking PHP "mbstring" extension  
+[2023-03-07 13:56:31+00:00] NOTICE: Checking PHP "fileinfo" extension  
+[2023-03-07 13:56:31+00:00] NOTICE: Checking PHP "openssl" extension  
+[2023-03-07 13:56:31+00:00] NOTICE: Checking PHP "gd" extension  
+[2023-03-07 13:56:31+00:00] NOTICE: Checking PHP "filter" extension  
+[2023-03-07 13:56:31+00:00] NOTICE: Checking PHP "hash" extension  
+[2023-03-07 13:56:31+00:00] INFO: Installer API request received {"method":"GET","endpoint":"checkPhpVersion"} 
+[2023-03-07 13:56:31+00:00] NOTICE: Checking PHP "dom" extension  
+[2023-03-07 13:56:31+00:00] NOTICE: Required PHP extensions are installed.  
+[2023-03-07 13:56:31+00:00] NOTICE: Compared PHP version {"installed":"8.1.14","needed":"8.0.2"} 
+[2023-03-07 13:56:31+00:00] NOTICE: PHP version requirement met.  
+[2023-03-07 13:56:31+00:00] INFO: Winter API request {"method":"GET","uri":"ping"} 
+[2023-03-07 13:56:31+00:00] NOTICE: Response received from Winter CMS API {"response":"pong"} 
+[2023-03-07 13:56:31+00:00] NOTICE: Winter CMS API connection successful.  
+[2023-03-07 14:09:05+00:00] INFO: Installer API request received {"method":"POST","endpoint":"checkDatabase"} 
+[2023-03-07 14:09:05+00:00] NOTICE: Check database connection  
+[2023-03-07 14:09:05+00:00] ERROR: Database could not be connected to. {"code":500,"exception":"SQLSTATE[HY000] [2002] Connection refused"} 
+[2023-03-07 14:09:05+00:00] INFO: Installer API request received {"method":"GET","endpoint":"checkWriteAccess"} 
+[2023-03-07 14:09:05+00:00] NOTICE: Current working directory is writable.  
+[2023-03-07 14:09:57+00:00] INFO: Installer API request received {"method":"GET","endpoint":"checkWriteAccess"} 
+[2023-03-07 14:09:57+00:00] NOTICE: Current working directory is writable.  
+[2023-03-07 14:09:57+00:00] INFO: Installer API request received {"method":"POST","endpoint":"checkDatabase"} 
+[2023-03-07 14:09:57+00:00] NOTICE: Check database connection  
+[2023-03-07 14:09:57+00:00] ERROR: Database could not be connected to. {"code":500,"exception":"SQLSTATE[HY000] [2002] Connection refused"} 
+[2023-03-07 14:09:58+00:00] INFO: Installer API request received {"method":"GET","endpoint":"checkWriteAccess"} 
+[2023-03-07 14:09:58+00:00] NOTICE: Current working directory is writable.  
+[2023-03-07 14:09:58+00:00] INFO: Installer API request received {"method":"POST","endpoint":"checkDatabase"} 
+[2023-03-07 14:09:58+00:00] NOTICE: Check database connection  
+[2023-03-07 14:09:58+00:00] ERROR: Database could not be connected to. {"code":500,"exception":"SQLSTATE[HY000] [2002] Connection refused"} 
+[2023-03-07 14:10:33+00:00] INFO: Installer API request received {"method":"GET","endpoint":"checkWriteAccess"} 
+[2023-03-07 14:10:33+00:00] NOTICE: Current working directory is writable.  
+[2023-03-07 14:10:34+00:00] INFO: Installer API request received {"method":"POST","endpoint":"checkDatabase"} 
+[2023-03-07 14:10:34+00:00] NOTICE: Check database connection  
+[2023-03-07 14:10:34+00:00] ERROR: Database could not be connected to. {"code":500,"exception":"SQLSTATE[HY000] [2002] Connection refused"} 
+[2023-03-07 14:21:31+00:00] INFO: Installer API request received {"method":"GET","endpoint":"checkWriteAccess"} 
+[2023-03-07 14:21:31+00:00] NOTICE: Current working directory is writable.  
+[2023-03-07 14:21:31+00:00] INFO: Installer API request received {"method":"POST","endpoint":"checkDatabase"} 
+[2023-03-07 14:21:31+00:00] NOTICE: Check database connection  
+[2023-03-07 14:21:31+00:00] ERROR: Database could not be connected to. {"code":500,"exception":"SQLSTATE[HY000] [2002] Connection refused"} 
+[2023-03-07 14:29:33+00:00] INFO: Installer API request received {"method":"GET","endpoint":"checkWriteAccess"} 
+[2023-03-07 14:29:33+00:00] NOTICE: Current working directory is writable.  
+[2023-03-07 14:29:33+00:00] INFO: Installer API request received {"method":"POST","endpoint":"checkDatabase"} 
+[2023-03-07 14:29:33+00:00] NOTICE: Check database connection  
+[2023-03-07 14:29:33+00:00] ERROR: Database could not be connected to. {"code":500,"exception":"SQLSTATE[HY000] [2002] Connection refused"} 
+[2023-03-07 14:29:37+00:00] INFO: Installer API request received {"method":"GET","endpoint":"checkApi"} 
+[2023-03-07 14:29:37+00:00] NOTICE: Trying Winter CMS API  
+[2023-03-07 14:29:37+00:00] INFO: Winter API request {"method":"GET","uri":"ping"} 
+[2023-03-07 14:29:37+00:00] INFO: Installer API request received {"method":"GET","endpoint":"checkPhpVersion"} 
+[2023-03-07 14:29:37+00:00] NOTICE: Compared PHP version {"installed":"8.1.14","needed":"8.0.2"} 
+[2023-03-07 14:29:37+00:00] NOTICE: PHP version requirement met.  
+[2023-03-07 14:29:37+00:00] INFO: Installer API request received {"method":"GET","endpoint":"checkPhpExtensions"} 
+[2023-03-07 14:29:37+00:00] NOTICE: Checking PHP "curl" extension  
+[2023-03-07 14:29:37+00:00] NOTICE: Checking PHP "json" extension  
+[2023-03-07 14:29:37+00:00] NOTICE: Checking PHP "pdo" extension  
+[2023-03-07 14:29:37+00:00] NOTICE: Checking PHP "zip" extension  
+[2023-03-07 14:29:37+00:00] NOTICE: Checking PHP "mbstring" extension  
+[2023-03-07 14:29:37+00:00] NOTICE: Checking PHP "fileinfo" extension  
+[2023-03-07 14:29:37+00:00] NOTICE: Checking PHP "openssl" extension  
+[2023-03-07 14:29:37+00:00] NOTICE: Checking PHP "gd" extension  
+[2023-03-07 14:29:37+00:00] NOTICE: Checking PHP "filter" extension  
+[2023-03-07 14:29:37+00:00] NOTICE: Checking PHP "hash" extension  
+[2023-03-07 14:29:37+00:00] NOTICE: Checking PHP "dom" extension  
+[2023-03-07 14:29:37+00:00] NOTICE: Required PHP extensions are installed.  
+[2023-03-07 14:29:38+00:00] NOTICE: Response received from Winter CMS API {"response":"pong"} 
+[2023-03-07 14:29:38+00:00] NOTICE: Winter CMS API connection successful.  
+[2023-03-07 14:30:38+00:00] INFO: Installer API request received {"method":"GET","endpoint":"checkWriteAccess"} 
+[2023-03-07 14:30:38+00:00] NOTICE: Current working directory is writable.  
+[2023-03-07 14:30:38+00:00] INFO: Installer API request received {"method":"POST","endpoint":"checkDatabase"} 
+[2023-03-07 14:30:38+00:00] NOTICE: Check database connection  
+[2023-03-07 14:30:38+00:00] NOTICE: Found 0 table(s) {"tables":""} 
+[2023-03-07 14:30:38+00:00] NOTICE: Database connection established and verified empty  
+[2023-03-07 14:30:40+00:00] INFO: Installer API request received {"method":"POST","endpoint":"downloadWinter"} 
+[2023-03-07 14:30:40+00:00] NOTICE: Try downloading Winter CMS archive  
+[2023-03-07 14:30:40+00:00] NOTICE: Downloading Winter ZIP via cURL {"url":"https://github.com/wintercms/winter/archive/refs/heads/1.2.zip"} 
+[2023-03-07 14:30:42+00:00] NOTICE: Winter CMS ZIP file downloaded {"path":"/var/www/html/hartman/.wintercms/winter.zip"} 
+[2023-03-07 14:30:42+00:00] INFO: Installer API request received {"method":"POST","endpoint":"extractWinter"} 
+[2023-03-07 14:30:42+00:00] NOTICE: Begin extracting Winter CMS archive  
+[2023-03-07 14:30:42+00:00] NOTICE: Move subfoldered files into position {"subfolder":"winter-1.2/"} 
+[2023-03-07 14:30:42+00:00] NOTICE: Remove ZIP subfolder {"subfolder":"winter-1.2/"} 
+[2023-03-07 14:30:42+00:00] NOTICE: Make artisan command-line tool executable {"path":"/var/www/html/hartman/.wintercms/artisan"} 
+[2023-03-07 14:30:42+00:00] NOTICE: Remove Composer Merge plugin from composer.json if found  
+[2023-03-07 14:30:42+00:00] NOTICE: Found merge plugin in required packages - removing  
+[2023-03-07 14:30:42+00:00] NOTICE: Found merge plugin config in "extra" config definition - removing  
+[2023-03-07 14:30:43+00:00] INFO: Installer API request received {"method":"POST","endpoint":"lockDependencies"} 
+[2023-03-07 14:30:43+00:00] NOTICE: Create Composer instance  
+[2023-03-07 14:30:43+00:00] NOTICE: Set memory limit to 1.5GB  
+[2023-03-07 14:30:43+00:00] NOTICE: Set work directory for Composer {"path":"/var/www/html/hartman/.wintercms"} 
+[2023-03-07 14:30:43+00:00] NOTICE: Create home/cache directory for Composer {"path":"/var/www/html/hartman/.wintercms/.composer"} 
+[2023-03-07 14:30:43+00:00] NOTICE: Set home/cache directory for Composer {"path":"/var/www/html/hartman/.wintercms/.composer"} 
+[2023-03-07 14:30:43+00:00] NOTICE: Run Composer "update" command - generate only a lockfile  
+[2023-03-07 14:30:47+00:00] NOTICE: Locked Composer packages {"numPackages":116,"lockFile":"/var/www/html/hartman/.wintercms/composer.lock"} 
+[2023-03-07 14:30:48+00:00] INFO: Installer API request received {"method":"POST","endpoint":"installDependencies"} 
+[2023-03-07 14:30:48+00:00] NOTICE: Create Composer instance  
+[2023-03-07 14:30:48+00:00] NOTICE: Set memory limit to 1.5GB  
+[2023-03-07 14:30:48+00:00] NOTICE: Set work directory for Composer {"path":"/var/www/html/hartman/.wintercms"} 
+[2023-03-07 14:30:48+00:00] NOTICE: Set home/cache directory for Composer {"path":"/var/www/html/hartman/.wintercms/.composer"} 
+[2023-03-07 14:30:48+00:00] NOTICE: Run Composer "install" command - install from lockfile  
+[2023-03-07 14:30:55+00:00] NOTICE: Installed Composer packages {"numPackages":116} 
+[2023-03-07 14:30:55+00:00] INFO: Installer API request received {"method":"POST","endpoint":"setupConfig"} 
+[2023-03-07 14:30:55+00:00] NOTICE: Booting Laravel framework  
+[2023-03-07 14:30:55+00:00] NOTICE: Loading autoloader  
+[2023-03-07 14:30:55+00:00] NOTICE: Bootstrapping kernel  
+[2023-03-07 14:30:56+00:00] NOTICE: Rewriting config {"path":"/var/www/html/hartman/.wintercms/config/app.php"} 
+[2023-03-07 14:30:56+00:00] NOTICE: Rewriting config {"path":"/var/www/html/hartman/.wintercms/config/cms.php"} 
+[2023-03-07 14:30:56+00:00] NOTICE: Rewriting config {"path":"/var/www/html/hartman/.wintercms/config/database.php"} 
+[2023-03-07 14:30:56+00:00] NOTICE: Flushing OPCache  
+[2023-03-07 14:30:56+00:00] INFO: Installer API request received {"method":"POST","endpoint":"runMigrations"} 
+[2023-03-07 14:30:56+00:00] NOTICE: Booting Laravel framework  
+[2023-03-07 14:30:56+00:00] NOTICE: Loading autoloader  
+[2023-03-07 14:30:56+00:00] NOTICE: Bootstrapping kernel  
+[2023-03-07 14:30:56+00:00] NOTICE: Running artisan "config:clear" command  
+[2023-03-07 14:30:56+00:00] NOTICE: Command finished. {"output":"\n   INFO  Configuration cache cleared successfully.  \n\n"} 
+[2023-03-07 14:30:56+00:00] NOTICE: Running database migrations  
+[2023-03-07 14:31:01+00:00] NOTICE: Command finished. {"output":"Migrating application and plugins...\n\n   INFO  Migration table created.  \n\n\nMigrating System module...\n\n   INFO  Running migrations.  \n\n  2013_10_01_000001_Db_Deferred_Bindings .......................... 161ms DONE\n  2013_10_01_000002_Db_System_Files ............................... 137ms DONE\n  2013_10_01_000003_Db_System_Plugin_Versions ...................... 58ms DONE\n  2013_10_01_000004_Db_System_Plugin_History ....................... 93ms DONE\n  2013_10_01_000005_Db_System_Settings ............................. 61ms DONE\n  2013_10_01_000006_Db_System_Parameters ........................... 59ms DONE\n  2013_10_01_000007_Db_System_Add_Disabled_Flag .................... 27ms DONE\n  2013_10_01_000008_Db_System_Mail_Templates ....................... 57ms DONE\n  2013_10_01_000009_Db_System_Mail_Layouts ......................... 42ms DONE\n  2014_10_01_000010_Db_Jobs ........................................ 51ms DONE\n  2014_10_01_000011_Db_System_Event_Logs ........................... 78ms DONE\n  2014_10_01_000012_Db_System_Request_Logs ......................... 53ms DONE\n  2014_10_01_000013_Db_System_Sessions ............................. 75ms DONE\n  2015_10_01_000014_Db_System_Mail_Layout_Rename .................... 4ms DONE\n  2015_10_01_000015_Db_System_Add_Frozen_Flag ...................... 34ms DONE\n  2015_10_01_000016_Db_Cache ....................................... 94ms DONE\n  2015_10_01_000017_Db_System_Revisions ........................... 119ms DONE\n  2015_10_01_000018_Db_FailedJobs .................................. 43ms DONE\n  2016_10_01_000019_Db_System_Plugin_History_Detail_Text .......... 127ms DONE\n  2016_10_01_000020_Db_System_Timestamp_Fix ....................... 296ms DONE\n  2017_08_04_121309_Db_Deferred_Bindings_Add_Index_Session ......... 32ms DONE\n  2017_10_01_000021_Db_System_Sessions_Update ...................... 28ms DONE\n  2017_10_01_000022_Db_Jobs_FailedJobs_Update ..................... 101ms DONE\n  2017_10_01_000023_Db_System_Mail_Partials ........................ 36ms DONE\n  2017_10_23_000024_Db_System_Mail_Layouts_Add_Options_Field ....... 25ms DONE\n  2021_10_01_000025_Db_Add_Pivot_Data_To_Deferred_Bindings ......... 35ms DONE\n  2022_08_06_000026_Db_System_Add_App_Birthday_Date ................ 14ms DONE\n  2022_10_14_000027_Db_Jobs_FailedJobs_Update ..................... 239ms DONE\n\n\nMigrating Backend module...\n\n   INFO  Running migrations.  \n\n  2013_10_01_000001_Db_Backend_Users .............................. 189ms DONE\n  2013_10_01_000002_Db_Backend_User_Groups ......................... 60ms DONE\n  2013_10_01_000003_Db_Backend_Users_Groups ........................ 85ms DONE\n  2013_10_01_000004_Db_Backend_User_Throttle ...................... 110ms DONE\n  2014_01_04_000005_Db_Backend_User_Preferences .................... 69ms DONE\n  2014_10_01_000006_Db_Backend_Access_Log .......................... 44ms DONE\n  2014_10_01_000007_Db_Backend_Add_Description_Field ............... 66ms DONE\n  2015_10_01_000008_Db_Backend_Add_Superuser_Flag .................. 44ms DONE\n  2016_10_01_000009_Db_Backend_Timestamp_Fix ...................... 105ms DONE\n  2017_10_01_000010_Db_Backend_User_Roles ......................... 118ms DONE\n  2018_12_16_000011_Db_Backend_Add_Deleted_At ....................... 3ms DONE\n\n\nMigrating Cms module...\n\n   INFO  Running migrations.  \n\n  2014_10_01_000001_Db_Cms_Theme_Data .............................. 72ms DONE\n  2016_10_01_000002_Db_Cms_Timestamp_Fix ........................... 36ms DONE\n  2017_10_01_000003_Db_Cms_Theme_Logs ............................. 143ms DONE\n  2018_11_01_000001_Db_Cms_Theme_Templates ........................ 102ms DONE\n\n\nSeeding System module...\n\n   INFO  Seeded System.  \n\n\nSeeding Backend module...\n\n   INFO  Seeded Backend.  \n\nMigrating Winter Demo (Winter.Demo) plugin...\n\n   INFO  Running migrations.  \n\n  1.0.1:    First version of Demo .................................. 17ms DONE\n\n\n   INFO  Migration complete.  \n\n   INFO  \\Backend\\Database\\Seeds\\DatabaseSeeder reported the following:  \n\n    - The following password has been automatically generated for the \"admin\" account: ZqCZEXicvJqE8xWN6jOc8K\n\n"} 
+[2023-03-07 14:31:01+00:00] INFO: Installer API request received {"method":"POST","endpoint":"createAdmin"} 
+[2023-03-07 14:31:01+00:00] NOTICE: Booting Laravel framework  
+[2023-03-07 14:31:01+00:00] NOTICE: Loading autoloader  
+[2023-03-07 14:31:01+00:00] NOTICE: Bootstrapping kernel  
+[2023-03-07 14:31:01+00:00] NOTICE: Finding initial admin account  
+[2023-03-07 14:31:01+00:00] NOTICE: Changing admin account to details provided in installation  
+[2023-03-07 14:31:02+00:00] INFO: Installer API request received {"method":"POST","endpoint":"cleanUp"} 
+[2023-03-07 14:31:02+00:00] NOTICE: Removing installation files  
+[2023-03-07 14:31:02+00:00] NOTICE: Removing temporary installation folders  
+[2023-03-07 14:31:02+00:00] NOTICE: Removing core development files  
+[2023-03-07 14:31:02+00:00] NOTICE: Moving files from temporary work directory to final installation path {"workDir":"/var/www/html/hartman/.wintercms","installDir":"/var/www/html/hartman"} 
+[2023-03-07 14:31:02+00:00] NOTICE: Removing work directory  
+[2023-03-07 14:31:02+00:00] NOTICE: Installation complete!  

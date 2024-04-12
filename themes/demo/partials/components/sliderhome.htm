@@ -1,0 +1,86 @@
+[builderList]
+modelClass = "Crowtech\Portfolio\Models\Portfolio"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 3
+pageNumber = "{{ :page }}"
+==
+{% set sliderProjeto = builderList.records %} {% set displayColumn =
+builderList.displayColumn %} {% set noRecordsMessage =
+builderList.noRecordsMessage %} {% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %} {% set
+detailsUrlParameter = builderList.detailsUrlParameter %}
+
+<div class="block marginTop">
+  <div class="container">
+    <div class="section-title">
+      <h2>Alguns de Nossos projetos</h2>
+    </div>
+    <!--end title-->
+    <div class="featured-works-carousel">
+      {% for projetoHome in sliderProjeto %}
+      <div class="slide">
+        <div class="row">
+          <div class="col-md-8 col-sm-8">
+            <div class="title framed shadow">
+              <a class="linkMozaico" href="/projeto/{{projetoHome.slug}}"
+                ><h3>{{projetoHome.titulo}}</h3></a
+              >
+              <div class="separator"></div>
+              <a class="linkMozaico" href="/projeto/{{projetoHome.slug}}"
+                ><h3>{{projetoHome.cidade}}</h3></a
+              >
+            </div>
+            <div class="image">
+              <a class="linkMozaico" href="/projeto/{{projetoHome.slug}}">
+                <div style="background:url({{projetoHome.fotoprincipal.path}});background-repeat: no-repeat; background-size: cover; background-position: right;border-radius: 5px;"><img
+                  class="ImagemSlideHome"
+                  src="{{projetoHome.fotoprincipal.path}}"
+                  alt=""/></div></a>
+            </div>
+            <!--end image-->
+          </div>
+          <!--end col-md-8-->
+          <div class="col-md-4 col-sm-4">
+            <dl class="info">
+              <dt>NOME</dt>
+              <dd>{{projetoHome.titulo}}</dd>
+              <dt>TIPOLOGIA</dt>
+              <dd>{{projetoHome.categoria.name}}</dd>
+              <dt>AREA TOTAL</dt>
+              <dd>{{projetoHome.area}}</dd>
+              <dt>ANO DE CONSTRUÇÃO</dt>
+              <dd>{{projetoHome.ano}}</dd>
+              <dt>CIDADE</dt>
+              <dd>{{projetoHome.cidade}}</dd>
+            </dl>
+            <div class="separator"></div>
+            <div class="tags">
+              <span class="tag">{{projetoHome.detalhe}}</span>
+            </div>
+            <p>{{projetoHome.descricao|raw}}</p>
+            <a href="/projeto/{{projetoHome.slug}}" class="btn btn-default VerProjeto"
+              >Veja o projeto <i class="fa fa-arrow-right iconeArrow" aria-hidden="true"></i></a
+            >
+          </div>
+        </div>
+        <!--end row-->
+      </div>
+      <!--end slide-->
+      {% endfor %}
+    </div>
+    <!--end featured-works-carousel-->
+  </div>
+  <!--end container-->
+  <div class="bg black opacity-10">
+    <div class="image opacity-60 bg-transfer bg-fixed">
+      <img src="{{'assets/images/fundohome.png'|theme}}" alt="" />
+    </div>
+  </div>
+  <!--end bg-->
+</div>
+<!--end block-->

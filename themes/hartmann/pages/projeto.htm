@@ -1,0 +1,58 @@
+title = "Projeto"
+url = "/projeto/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails projeto]
+modelClass = "Crowtech\Conteudos\Models\Projeto"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "slug"
+notFoundMessage = "Registro não encontrado"
+==
+{% set projeto = projeto.record %}
+
+<!-- Portfolio Single -->
+<div class="slick-slider slick-single-image">
+
+    {% for image in projeto.galeria %}
+	<img src="{{ image.path }}" class="project__featured-img" alt="">
+	{% endfor %}
+
+</div>			
+
+<section class="section-wrap pt-72 pb-32">
+	<div class="container">
+		<div class="row">
+	
+			<div class="col-lg-8 project__info mb-md-40">
+			    {{ projeto.conteudo|raw}}
+			</div> <!-- project info -->
+	
+			<div class="col-lg-4 project__details">
+				<ul class="project__meta">
+					<li class="project__meta-item">
+						<span class="project__meta-label">Cliente:</span>
+						<span class="project__meta-value">{{projeto.cliente}}</span>
+					</li>
+					<li class="project__meta-item">
+						<span class="project__meta-label">Data:</span>
+						<span class="project__meta-value">{{projeto.data}}</span>
+					</li>								
+					<li class="project__meta-item">
+						<span class="project__meta-label">Categoria:</span>
+						<span class="project__meta-value">{{projeto.categoria.nome}}</span>
+					</li>
+					<li class="project__meta-item">
+						<span class="project__meta-label">Localização:</span>
+						<span class="project__meta-value">{{projeto.localizacao}}</span>
+					</li>
+				</ul>
+
+			</div>
+	
+		</div>
+	</div>
+</section> <!-- end portfolio single -->
+
+{% partial 'componentes/projetos' %}

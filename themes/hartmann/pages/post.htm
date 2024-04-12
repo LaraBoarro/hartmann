@@ -1,0 +1,84 @@
+title = "Post"
+url = "/post/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog"
+
+[builderDetails infos]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+identifierValue = 1
+modelKeyColumn = "id"
+displayColumn = "id"
+notFoundMessage = "Registro não encontrado"
+==
+{% set post = blogPost.post %}
+
+<!-- Page Title -->
+<section class="page-title page-title--tall blog-featured-img bg-dark-overlay text-center" style="background-image: url({{post.featured_images[0].path}});">
+	<div class="container">
+		<div class="page-title__holder">
+			<h1 class="page-title__title">{{ post.title }}</h1>
+			<ul class="entry__meta">
+				<li class="entry__meta-date">
+					<span>{{ post.published_at.format('d/m/Y') }}</span>
+				</li>
+				<li class="entry__meta-author">
+					<a href="#">{{ post.user.first_name }}</a>
+				</li>
+				<li class="entry__meta-category">
+					<a href="#">{{ post.categories[0].name }}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section> <!-- end page title -->
+
+<!-- Single Post -->
+<section class="section-wrap pt-40 pb-48">
+	
+	<div class="box-offset-container">
+		<div class="blog__content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10">
+				
+						<!-- Article -->
+						<article class="entry mb-0">
+							<div class="entry__article-wrap">
+						
+								<!-- Share -->
+								<div class="entry__share">
+									<div class="sticky-col">
+									    {% set infos = infos.record %}
+										<div class="socials socials--rounded socials--base">
+											<a class="social social-facebook" href="{{ infos.linkface }}" title="facebook" target="_blank" aria-label="facebook">
+												<i class="ui-facebook"></i>
+											</a>
+											<a class="social social-instagram" href="{{ infos.linkface }}" title="instagram" target="_blank" aria-label="instagram">
+												<i class="ui-instagram"></i>
+											</a>
+											<a class="social social-whatsapp" href="{{ infos.linknumeroum }}" title="whatsapp" target="_blank" aria-label="whatsapp">
+												<i class="ui-whatsapp"></i>
+											</a>
+										</div>
+									</div>
+								</div> <!-- end share -->
+						
+								<div class="entry__article">
+								    {{ post.content_html | raw }}
+								</div>
+								<!-- end entry article -->
+							</div>
+							<!-- end entry article wrap -->
+						</article>
+						
+						
+					</div>
+				</div> 
+			</div>
+		</div>
+	</div>
+</section> <!-- end single post -->

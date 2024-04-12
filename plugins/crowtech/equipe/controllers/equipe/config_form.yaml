@@ -1,0 +1,10 @@
+name: Equipe
+form: $/crowtech/equipe/models/equipe/fields.yaml
+modelClass: Crowtech\Equipe\Models\Equipe
+defaultRedirect: crowtech/equipe/equipe
+create:
+    redirect: 'crowtech/equipe/equipe/update/:id'
+    redirectClose: crowtech/equipe/equipe
+update:
+    redirect: crowtech/equipe/equipe
+    redirectClose: crowtech/equipe/equipe

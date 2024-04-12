@@ -1,0 +1,32 @@
+[builderDetails infos]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+identifierValue = 1
+modelKeyColumn = "id"
+displayColumn = "id"
+notFoundMessage = "Registro não encontrado"
+==
+{% set infos = infos.record %}{% component 'builderDetails' %}
+<div class="d-flex justify-content-between align-items-center header">
+    <div class="d-flex align-items-center">
+        <button class="burger" onclick="toggleMenu()"></button>
+        <a href="{{ 'inicio'|page }}" style="padding-left:1rem;">
+            <img src={{'assets/logohartmann.png'|theme}} alt="" width="210px">
+        </a>
+    </div>
+    <div class="d-none d-md-flex" style="margin-right: 2rem;">
+        <ul>
+            <li><a href="{{ infos.linknumeroum }}"><i class="ui-phone"></i> {{ infos.numeroum }}</a></li>
+            <li class="separador"></li>
+            <li><a href="{{ infos.linkemail }}"><i class="ui-email"></i> {{ infos.email }}</a></li>
+        </ul>
+    </div>
+</div>
+<div class="menu">
+  <nav>
+    <a href="{{ 'inicio'|page }}" style="animation-delay: 0.2s">Início</a>
+    <a href="{{ 'sobre-nos'|page }}" style="animation-delay: 0.3s">Sobre nós</a>
+    <a href="{{ 'projetos'|page }}" style="animation-delay: 0.4s">Portfólio</a>
+    <a href="{{ 'contato'|page }}" style="animation-delay: 0.5s">Contato</a>
+     <a href="{{ 'blog'|page }}" style="animation-delay: 0.5s">Blog</a>
+  </nav>
+</div>

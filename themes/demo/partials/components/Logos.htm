@@ -1,0 +1,30 @@
+[builderList builderListLogos]
+modelClass = "Crowtech\Clientes\Models\Clientes"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set logos = builderListLogos.records %} {% set displayColumn =
+builderListLogos.displayColumn %} {% set noRecordsMessage =
+builderListLogos.noRecordsMessage %} {% set detailsPage = builderListLogos.detailsPage %}
+{% set detailsKeyColumn = builderListLogos.detailsKeyColumn %} {% set
+detailsUrlParameter = builderListLogos.detailsUrlParameter %} 
+{% for logosHome in logos %}
+<div class="block">
+  <div class="container">
+    <div class="logos">
+      {% for photo in logosHome.logocliente %}
+      <div class="logo">
+        <img class="imagemTesteLogoCliente" src="{{photo.path}}" alt="" />
+      </div>
+      {% endfor %}
+      <!--/ .logo-->
+    </div>
+    <!--/ .logos-->
+  </div>
+</div>
+{% endfor %}

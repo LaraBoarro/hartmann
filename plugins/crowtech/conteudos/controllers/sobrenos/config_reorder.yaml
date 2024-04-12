@@ -1,0 +1,4 @@
+title: Sobrenos
+modelClass: Crowtech\Conteudos\Models\Sobrenos
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,11 @@
+plugin:
+    name: 'crowtech.informacoes::lang.plugin.name'
+    description: 'crowtech.informacoes::lang.plugin.description'
+    author: crowtech
+    icon: oc-icon-info-circle
+    homepage: ''
+navigation:
+    main-menu-item-informacoes:
+        label: Informações
+        url: crowtech/informacoes/informacoes/update/1
+        icon: icon-info-circle

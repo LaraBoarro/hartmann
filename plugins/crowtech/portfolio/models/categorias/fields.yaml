@@ -1,0 +1,13 @@
+fields:
+    name:
+        label: 'Nome da Categoria'
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        readOnly: 0
+        preset:
+            field: name
+            type: slug
+        type: text

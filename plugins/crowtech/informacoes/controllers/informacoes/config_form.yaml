@@ -1,0 +1,10 @@
+name: Informacoes
+form: $/crowtech/informacoes/models/informacoes/fields.yaml
+modelClass: Crowtech\Informacoes\Models\Informacoes
+defaultRedirect: crowtech/informacoes/informacoes
+create:
+    redirect: 'crowtech/informacoes/informacoes/update/:id'
+    redirectClose: crowtech/informacoes/informacoes
+update:
+    redirect: crowtech/informacoes/informacoes
+    redirectClose: crowtech/informacoes/informacoes

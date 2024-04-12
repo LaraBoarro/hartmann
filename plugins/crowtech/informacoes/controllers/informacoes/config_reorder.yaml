@@ -1,0 +1,4 @@
+title: Informacoes
+modelClass: Crowtech\Informacoes\Models\Informacoes
+toolbar:
+    buttons: reorder_toolbar

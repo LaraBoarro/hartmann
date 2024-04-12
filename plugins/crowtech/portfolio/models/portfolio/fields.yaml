@@ -1,0 +1,95 @@
+tabs:
+    fields:
+        titulo:
+            label: 'Titulo (Caso altere o titulo mais de uma vez, pode acontecer de o slug nao alterar, portanto tem que alterar tambem)'
+            span: auto
+            type: text
+            tab: 'Informações principais'
+        valor:
+            label: 'Valor do projeto'
+            span: auto
+            type: text
+            tab: 'Informações principais'
+        cliente:
+            label: 'Cliente (Nome/empresa)'
+            span: auto
+            type: text
+            tab: 'Informações principais'
+        detalhe:
+            label: 'Detalhes a mais'
+            span: auto
+            type: text
+            tab: 'Informações principais'
+        categoria:
+            label: 'Categoria (Não alterar ou adicionar categorias na subseção na lateral)'
+            nameFrom: name
+            descriptionFrom: description
+            span: auto
+            type: relation
+            tab: 'Informações principais'
+        ano:
+            label: 'Ano (Data) da construção'
+            span: auto
+            required: 1
+            type: text
+            tab: 'Informações principais'
+        slug:
+            label: 'Slug (Seguir o mesmo nome do titulo)'
+            span: auto
+            disabled: 0
+            readOnly: 0
+            preset:
+                field: titulo
+                type: slug
+            type: text
+            tab: 'Informações principais'
+        descricao:
+            label: Descrição
+            size: ''
+            span: auto
+            type: richeditor
+            tab: 'Informações principais'
+        area:
+            label: 'Tamanho do local (Area)'
+            span: auto
+            type: text
+            tab: 'Informações principais'
+        cidade:
+            label: Localização
+            span: auto
+            type: text
+            tab: 'Informações principais'
+        fotoprincipal:
+            label: 'Foto Principal'
+            mode: image
+            imageWidth: '400'
+            imageHeight: '400'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Area de imagens'
+        galeria:
+            label: Galeria
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Area de imagens'
+        bannerprojeto:
+            label: 'banner Principal do Projeto'
+            mode: image
+            imageWidth: '400'
+            imageHeight: '300'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Area de imagens'

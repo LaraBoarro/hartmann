@@ -1,0 +1,11 @@
+plugin:
+    name: 'crowtech.comentarios::lang.plugin.name'
+    description: 'crowtech.comentarios::lang.plugin.description'
+    author: crowtech
+    icon: oc-icon-comments-o
+    homepage: ''
+navigation:
+    main-menu-item-comentarios:
+        label: Comentarios
+        url: crowtech/comentarios/comentarios
+        icon: icon-comments-o

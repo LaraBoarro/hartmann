@@ -1,0 +1,33 @@
+[builderList builderListComment]
+modelClass = "Crowtech\Comentarios\Models\Comentarios"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set comentarios = builderListComment.records %}
+{% set displayColumn = builderListComment.displayColumn %}
+{% set noRecordsMessage = builderListComment.noRecordsMessage %}
+{% set detailsPage = builderListComment.detailsPage %}
+{% set detailsKeyColumn = builderListComment.detailsKeyColumn %}
+{% set detailsUrlParameter = builderListComment.detailsUrlParameter %}
+
+<div class="container comentfundo">
+  <div class="featured-works-carouseel">
+    {% for comentariosPublicacao in comentarios %}
+    <div class="slide ">
+      <img class="ImagemSlideComentario" src="{{comentariosPublicacao.comentario_foto.path}}" alt="" />
+      <div class="slideComantario">
+        <img class="quoteImage" src="{{'assets/images/quote.png'|theme}}" alt="" />
+        <h3>{{comentariosPublicacao.titulo}}</h3>
+        <h4 class="subtituloComentario">{{comentariosPublicacao.subtitulo}}</h4>
+        <p>{{comentariosPublicacao.descricao}}</p>
+      </div>
+    </div>
+    <!--end slide-->
+    {% endfor %}
+  </div>
+</div>

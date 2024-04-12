@@ -1,0 +1,10 @@
+name: Portfolio
+form: $/crowtech/portfolio/models/portfolio/fields.yaml
+modelClass: Crowtech\Portfolio\Models\Portfolio
+defaultRedirect: crowtech/portfolio/portfolio
+create:
+    redirect: 'crowtech/portfolio/portfolio/update/:id'
+    redirectClose: crowtech/portfolio/portfolio
+update:
+    redirect: crowtech/portfolio/portfolio
+    redirectClose: crowtech/portfolio/portfolio

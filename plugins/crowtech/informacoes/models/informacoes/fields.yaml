@@ -1,0 +1,126 @@
+tabs:
+    fields:
+        bannernos:
+            label: 'Banner Página de Sobre Nós'
+            mode: image
+            imageWidth: '300'
+            imageHeight: '300'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Banners das Paginas Internas'
+        bannerportfolio:
+            label: 'Banner página de Portfolio'
+            mode: image
+            imageWidth: '300'
+            imageHeight: '300'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Banners das Paginas Internas'
+        bannerblog:
+            label: 'Banner página do Blog'
+            mode: image
+            imageWidth: '300'
+            imageHeight: '300'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Banners das Paginas Internas'
+        bannercontato:
+            label: 'Banner página de Contato'
+            mode: image
+            imageWidth: '200'
+            imageHeight: '200'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Banners das Paginas Internas'
+        linkemail:
+            label: 'Link Email Hartmann'
+            span: auto
+            type: text
+            tab: 'Links / Redes Sociais / Contato'
+        linknumeroum:
+            label: 'Link Numero de Whatsapp'
+            span: auto
+            type: text
+            tab: 'Links / Redes Sociais / Contato'
+        email:
+            label: 'Email Hartmann'
+            span: auto
+            type: text
+            tab: 'Links / Redes Sociais / Contato'
+        linkface:
+            label: 'Link Facebook Hartmann'
+            span: auto
+            type: text
+            tab: 'Links / Redes Sociais / Contato'
+        insta:
+            label: 'Instagram Hartmann'
+            span: auto
+            type: text
+            tab: 'Links / Redes Sociais / Contato'
+        enderecoum:
+            label: 'Endereço Um'
+            span: auto
+            type: text
+            tab: 'Links / Redes Sociais / Contato'
+        emaildois:
+            label: 'Email Dois'
+            span: auto
+            type: text
+            tab: 'Links / Redes Sociais / Contato'
+        emailum:
+            label: 'Email Um'
+            span: auto
+            type: text
+            tab: 'Links / Redes Sociais / Contato'
+        enderecodois:
+            label: 'Endereço Dois'
+            span: auto
+            type: text
+            tab: 'Links / Redes Sociais / Contato'
+        linkinsta:
+            label: 'Link Instagram Hartmann'
+            span: auto
+            type: text
+            tab: 'Links / Redes Sociais / Contato'
+        numerodois:
+            label: 'Numero Dois'
+            span: auto
+            type: text
+            tab: 'Links / Redes Sociais / Contato'
+        numeroum:
+            label: 'Numero Um'
+            span: auto
+            type: text
+            tab: 'Links / Redes Sociais / Contato'
+        face:
+            label: 'Facebook Hartmann'
+            span: auto
+            type: text
+            tab: 'Links / Redes Sociais / Contato'
+        frase:
+            label: 'Frase (Página de contato)'
+            span: auto
+            type: text
+            tab: 'Links / Redes Sociais / Contato'
+        mapinha:
+            label: Mapa
+            size: ''
+            span: auto
+            type: richeditor
+            tab: Mapa

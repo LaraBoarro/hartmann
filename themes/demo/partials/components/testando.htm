@@ -1,0 +1,83 @@
+[builderList builderListFiltro]
+modelClass = "Crowtech\Portfolio\Models\Portfolio"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+<style>
+/*CSS buttons*/
+.grid {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+.button-group {
+  margin: 80px auto;
+  display: table;
+}
+.button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 0;
+  color: #333;
+  cursor: pointer;
+  background-color: #eee;
+  margin: 0 3px;
+}
+.button:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+.button.is-checked {
+  background: green;
+  color: #fff;
+}
+.element-item {
+  padding: 0;
+  margin: 10px;
+  width: calc(33% - 20px);
+  display: inline-block;
+}
+.item-image {
+  width: 100%;
+  padding-bottom: 50%;
+  background-size: cover;
+}
+.item-title {
+  margin: 0;
+  padding: 10px;
+  height: 40px;
+  overflow: hidden;
+}
+
+/* end gallery style */
+body {
+  background-color: #1d1e22
+}
+{% set filtro = builderListFiltro.records %}
+{% set displayColumn = builderListFiltro.displayColumn %}
+{% set noRecordsMessage = builderListFiltro.noRecordsMessage %}
+{% set detailsPage = builderListFiltro.detailsPage %}
+{% set detailsKeyColumn = builderListFiltro.detailsKeyColumn %}
+{% set detailsUrlParameter = builderListFiltro.detailsUrlParameter %}
+
+
+    
+      
+    
+
+</style>
+<div class="container">
+  <div class="filtrosPortfolio span-group filters-span-group filtering text-center col-12 pb-20">
+    <div class="filter">
+      <span><a href="/portifolio">Todos</a></span>
+      {% for filtrar in filtro.categorias %}
+      <span><a href="/portifolio/categoria/edificios-comerciais">Edificios-comerciais</a></span>
+      {% endfor %}
+    </div>
+  </div>
+</div>

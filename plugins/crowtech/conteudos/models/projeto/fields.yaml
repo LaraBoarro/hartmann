@@ -1,0 +1,58 @@
+fields:
+    nome:
+        label: Nome
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        readOnly: 1
+        preset:
+            field: nome
+            type: slug
+        type: text
+    categoria:
+        label: Categoria
+        nameFrom: nome
+        descriptionFrom: nome
+        span: auto
+        type: relation
+    cliente:
+        label: Cliente
+        span: auto
+        type: text
+    data:
+        label: Data
+        span: auto
+        type: text
+    localizacao:
+        label: Localização
+        span: auto
+        type: text
+    imagemprincipal:
+        label: 'Imagem principal'
+        mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        span: auto
+        required: 1
+        type: mediafinder
+        commentAbove: 'Tamanho: 450x725'
+    galeria:
+        label: Galeria
+        mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+        commentAbove: 'Tamanho: 1400x935'
+    conteudo:
+        label: Conteúdo
+        size: ''
+        span: full
+        type: richeditor

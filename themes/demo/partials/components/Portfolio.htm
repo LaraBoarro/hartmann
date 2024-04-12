@@ -1,0 +1,87 @@
+[builderList builderListPortfolio]
+modelClass = "Crowtech\Portfolio\Models\Portfolio"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "portifolio"
+detailsKeyColumn = "id"
+detailsUrlParameter = "id"
+recordsPerPage = 9
+pageNumber = "{{ :page }}"
+==
+{% set PorfolioPage = builderListPortfolio.records %} {% set displayColumn =
+builderListPortfolio.displayColumn %} {% set noRecordsMessage =
+builderListPortfolio.noRecordsMessage %} {% set detailsPage = builderListPortfolio.detailsPage %}
+{% set detailsKeyColumn = builderListPortfolio.detailsKeyColumn %} {% set
+detailsUrlParameter = builderListPortfolio.detailsUrlParameter %}
+
+
+{% partial 'components/menu-categorias' %}
+<div class="block">
+  <div class="container">
+    <div class="gallery">
+    <!-- parallax-wrapper - add the class in the div below -->
+      <div class="row">
+        {% for PortfolioPublicacao in PorfolioPage %}
+        <div
+          class="col-md-4 col-sm-4"
+        >
+          <a
+            href="/projeto/{{PortfolioPublicacao.slug}}"
+            class="gallery-item"
+            data-scroll-reveal="enter left and move 50px"
+          >
+            <div class="title framed shadow">
+              <div class="name">{{PortfolioPublicacao.titulo}}</div>
+              <div class="place">{{PortfolioPublicacao.categoria.name}}
+              </div>
+            </div>
+            <!--end title-->
+            <div class="arrow arrow_right">
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+            <div class="image cardImage imagemProjetoHome" style="background-image: url({{PortfolioPublicacao.fotoprincipal.path}});">
+            </div>
+            <!--end image-->
+          </a>
+          <!--end gallery-item-->
+        </div>
+        <!--end col-md-4-->
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% if records.lastPage > 1 %}
+<ul class="pagination">
+  {% if records.currentPage > 1 %}
+  <li class="PaginationButton">
+    <a
+      class="linkPaginacaoPortfolio"
+      href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}"
+      >&larr; Anterior</a
+    >
+  </li>
+  {% endif %} {% for page in 1..records.lastPage %}
+  <li
+    class="PaginationButton"
+    class="{{ records.currentPage == page ? 'active' : null }}"
+  >
+    <a
+      class="linkPaginacaoPortfolio"
+      href="{{ this.page.baseFileName|page({ (pageParam): page }) }}"
+      >{{ page }}</a
+    >
+  </li>
+  {% endfor %} {% if records.lastPage > records.currentPage %}
+  <li class="PaginationButton">
+    <a
+      class="linkPaginacaoPortfolio"
+      href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}"
+      >Proximo &rarr;</a
+    >
+  </li>
+  {% endif %}
+</ul>
+{% endif %}

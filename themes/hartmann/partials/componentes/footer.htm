@@ -1,0 +1,69 @@
+[builderDetails infos]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+identifierValue = 1
+modelKeyColumn = "id"
+displayColumn = "id"
+notFoundMessage = "Registro não encontrado"
+==
+{% set infos = infos.record %}
+<!-- Footer -->
+<footer class="footer">
+	<div class="container-fluid">
+		<div class="footer__widgets">
+			<div class="row">
+
+				<div class="col-lg-3 col-md-3">
+					<div class="widget widget-about-us">
+						<!-- Logo -->
+						<a href="{{'assets/logohartmann.png'|theme}}" class="logo-container flex-child">
+							<img class="logo" src="{{'assets/logohartmann.png'|theme}}" srcset="{{'assets/logohartmann.png'|theme}}" alt="logo">
+						</a>
+						<p style="font-size: .8rem;line-height: 18px;color: #555;padding-top: 12px;">
+						    A Hartmann Arquitetos e Associados é um escritório de arquitetura com sede em Foz do Iguaçu, Paraná e Itapema, Santa Catarina. Temos como objetivo principal criar projetos exclusivos para cada cliente. Seja para projetos comerciais, residenciais e corporativos. Afinal, cada cliente é único. Então cada projeto deve ser exclusivo!
+						</p>
+					</div>
+				</div> <!-- end logo -->
+
+				<div class="col-lg-2 col-md-3">
+					<div class="widget widget_nav_menu">
+					    <h6>Navegação</h6>
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Sobre nós</a></li>
+							<li><a href="#">Portfólio</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Contato</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-2 col-md-3">
+					<div class="widget widget_nav_menu">
+					    <h6>Contato</h6>
+						<ul>
+						    <li><a href="{{ infos.linknumeroum }}" target="_blank"><i class="ui-phone"></i> {{ infos.numeroum }}</a></li>
+							<li><a href="{{ infos.linkemail }}" target="_blank"><i class="ui-email"></i> {{ infos.email }}</a></li>
+							<li><a href="{{ infos.linkinsta }}" target="_blank"><i class="ui-instagram"></i> {{ infos.insta }}</a></li>
+							<li><a href="{{ infos.linkface }}" target="_blank"><i class="ui-facebook"></i> {{ infos.face }}</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-3 offset-lg-2 col-md-3">
+					<div class="widget">
+					    <h6>Localização</h6>
+						<div class="frame">
+						    {{ infos.mapinha|raw }}
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div> <!-- end container -->
+</footer> <!-- end footer -->
+<div class="container-fluid">
+    <span class="copyright">
+		&copy; 2023 Hartmann Arquitetura, Desenvolvido por <a href="https://crowtech.digital/">CrowTech</a>
+	</span>
+</div>

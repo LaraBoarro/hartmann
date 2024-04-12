@@ -1,0 +1,5 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table crowtech_comentarios_'
+    - builder_table_create_crowtech_comentarios_.php

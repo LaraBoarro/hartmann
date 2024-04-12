@@ -1,0 +1,12 @@
+list: $/crowtech/conteudos/models/projeto/columns.yaml
+modelClass: Crowtech\Conteudos\Models\Projeto
+title: Projetos
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'crowtech/conteudos/projetos/update/:id'

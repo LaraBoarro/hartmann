@@ -1,0 +1,12 @@
+list: $/crowtech/comentarios/models/comentarios/columns.yaml
+modelClass: Crowtech\Comentarios\Models\Comentarios
+title: Comentarios
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'crowtech/comentarios/comentarios/update/:id'

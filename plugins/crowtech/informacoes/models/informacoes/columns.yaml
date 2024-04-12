@@ -1,0 +1,52 @@
+columns:
+    id:
+        label: id
+        type: number
+    numeroum:
+        label: numeroum
+        type: text
+    emailum:
+        label: emailum
+        type: text
+    enderecoum:
+        label: enderecoum
+        type: text
+    numerodois:
+        label: numerodois
+        type: text
+    emaildois:
+        label: emaildois
+        type: text
+    enderecodois:
+        label: enderecodois
+        type: text
+    insta:
+        label: insta
+        type: text
+    face:
+        label: face
+        type: text
+    email:
+        label: email
+        type: text
+    linkinsta:
+        label: linkinsta
+        type: text
+    linkface:
+        label: linkface
+        type: text
+    linkemail:
+        label: linkemail
+        type: text
+    linknumeroum:
+        label: linknumeroum
+        type: text
+    frase:
+        label: frase
+        type: text
+    sobre:
+        label: sobre
+        type: text
+    mapinha:
+        label: mapinha
+        type: text

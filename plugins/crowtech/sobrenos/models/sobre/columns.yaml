@@ -1,0 +1,43 @@
+columns:
+    id:
+        label: id
+        type: number
+    titulo:
+        label: titulo
+        type: text
+    textoum:
+        label: textoum
+        type: text
+    titutlodois:
+        label: titutlodois
+        type: text
+    textojose:
+        label: textojose
+        type: text
+    detalhejose:
+        label: detalhejose
+        type: text
+    tituloiconeum:
+        label: tituloiconeum
+        type: text
+    tituloiconedois:
+        label: tituloiconedois
+        type: text
+    tituloiconetres:
+        label: tituloiconetres
+        type: text
+    textoiconeum:
+        label: textoiconeum
+        type: text
+    textoiconedois:
+        label: textoiconedois
+        type: text
+    textoiconetres:
+        label: textoiconetres
+        type: text
+    titulooquefazemos:
+        label: titulooquefazemos
+        type: text
+    textooquefazemos:
+        label: textooquefazemos
+        type: text

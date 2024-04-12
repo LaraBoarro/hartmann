@@ -1,0 +1,12 @@
+title: Portfolio
+modelClass: Crowtech\Portfolio\Models\Portfolio
+list: $/crowtech/portfolio/models/portfolio/columns.yaml
+recordUrl: 'crowtech/portfolio/portfolio/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

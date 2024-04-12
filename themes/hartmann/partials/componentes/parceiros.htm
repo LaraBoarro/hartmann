@@ -1,0 +1,22 @@
+[builderDetails parceiros]
+modelClass = "Crowtech\Clientes\Models\Clientes"
+identifierValue = 9
+modelKeyColumn = "id"
+displayColumn = "id"
+notFoundMessage = "Registro não encontrado"
+==
+{% set parceiros = parceiros.record %}
+
+<!-- Partners -->
+<div class="partners bg-light text-center">
+	<div class="container">
+	    <p class="text-center" style="margin-bottom: 3rem;font-size: 18px;color: #333;">Nossos parceiros estratégicos</p>
+		<div class="owl-parceiros owl-carousel owl-theme">
+		    {% for logo in parceiros.logocliente %}
+            <div class="item">
+                <img src="{{logo.path}}" alt="{{logo.title}}" class="w-100">
+            </div>
+            {% endfor %}
+        </div>
+	</div>
+</div>

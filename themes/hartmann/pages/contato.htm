@@ -1,0 +1,132 @@
+title = "Contato"
+url = "/contato"
+layout = "default"
+is_hidden = 0
+
+[builderDetails infos]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+identifierValue = 1
+modelKeyColumn = "id"
+displayColumn = "id"
+notFoundMessage = "Registro não encontrado"
+
+[genericForm]
+group = "Contato"
+messages_success = "Seu contato foi enviado com sucesso!"
+messages_errors = "Ocorreu um erro no envio"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+{% set infos = infos.record %}
+{% partial 'componentes/breadcrumb' infos=infos.bannercontato %}
+
+<section class="section-wrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="contact mb-24">
+					<h5 class="contact__title">Foz do Iguaçu</h5>
+					<ul class="contact__items">
+						<li class="contact__item">
+							<span class="contact__item-label">Endereço:</span>
+							<address>{{ infos.enderecoum }}</address>
+						</li>
+						<li class="contact__item">
+							<span class="contact__item-label">Telefone: </span>
+							<a href="tel:{{ infos.numeroum }}">{{ infos.numeroum }}</a>
+						</li>
+						<li class="contact__item">
+							<span class="contact__item-label">Email: </span>
+							<a href="mailto:{{infos.emailum}}">{{infos.emailum}}</a>
+						</li>
+					</ul>
+					
+					<h5 class="contact__title">Itapema</h5>
+					<ul class="contact__items">
+						<li class="contact__item">
+							<span class="contact__item-label">Endereço:</span>
+							<address>{{ infos.enderecodois }}</address>
+						</li>
+						<li class="contact__item">
+							<span class="contact__item-label">Telefone: </span>
+							<a href="tel:{{ infos.numerodois }}">{{ infos.numerodois }}</a>
+						</li>
+						<li class="contact__item">
+							<span class="contact__item-label">Email: </span>
+							<a href="mailto:{{infos.emaildois}}">{{infos.emaildois}}</a>
+						</li>
+					</ul>
+
+					<h5 class="contact__title mt-40">Siga-nos</h5>
+					<div class="socials">
+						<a href="{{infos.linknumeroum}}" class="social social-whatsapp" aria-label="whatsapp" title="whatsapp"
+							target="_blank"><i class="ui-whatsapp"></i></a>
+						<a href="{{infos.linkface}}" class="social social-facebook" aria-label="facebook" title="facebook"
+							target="_blank"><i class="ui-facebook"></i></a>
+						<a href="{{infos.linkinsta}}" class="social social-instagram" aria-label="instagram" title="instagram"
+							target="_blank"><i class="ui-instagram"></i></a>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-lg-7 offset-lg-1">
+				<h2 class="section-title">Entre em contato</h2>
+				<p class="mb-40">Se você tiver alguma dúvida sobre o projeto ou quer deixar um feedback, entre em contato.</p>
+				<!-- Contact Form -->
+				<form data-request="{{ genericForm }}::onFormSubmit">
+                    {{ form_token() }}
+
+                    <div id="{{ genericForm }}_forms_flash"></div>
+    
+					<div class="row">
+						<div class="col-lg-6">
+							<!-- Name -->
+							<div class="material__form-group form-group">
+								<input type="text" name="nome" id="name" class="form-input material__input" required="">
+								<label for="name" class="material__label">Nome
+									<abbr title="required" class="required">*</abbr>
+								</label>
+								<span class="material__underline"></span>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<!-- Email -->
+							<div class="material__form-group form-group">
+								<input type="email" name="email" id="email" class="form-input material__input"
+									required="">
+								<label for="email" class="material__label">Email
+									<abbr title="required" class="required">*</abbr>
+								</label>
+								<span class="material__underline"></span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Subject -->
+					<div class="material__form-group form-group">
+						<input type="text" name="assunto" id="subject" class="form-input material__input">
+						<label for="subject" class="material__label">Assunto
+						</label>
+						<span class="material__underline"></span>
+					</div>
+
+					<div class="material__form-group form-group">
+						<textarea id="message" name="Mensagem" rows="7" class="form-input material__input"
+							required=""></textarea>
+						<label for="message" class="material__label">Mensagem
+							<abbr title="required" class="required">*</abbr>
+						</label>
+						<span class="material__underline"></span>
+					</div>
+					
+				    <button class="btn btn--lg btn--color btn--button" id="simpleContactSubmitButton" type="submit">Enviar contato</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section> <!-- end contact -->

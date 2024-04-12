@@ -1,0 +1,40 @@
+[builderList projetos]
+modelClass = "Crowtech\Conteudos\Models\Projeto"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 8
+pageNumber = "{{ :page }}"
+==
+{% set projetos = projetos.records %}
+
+<!-- Portfolio -->
+<section class="section-wrap pt-72 pb-72 pb-lg-40">
+	<div class="container">
+		<div class="title-row">
+			<h2 class="section-title">Nossos projetos</h2>
+		</div>					
+
+		<div class="row">
+				
+			{% for projeto in projetos %}
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="project__container">
+					<a href="/projeto/{{projeto.slug}}" style="background-image: url({{projeto.imagemprincipal|media}});">
+						<p class="project__title">{{projeto.nome}}</p>
+					</a>            
+				</div> 
+			</div> <!-- end project -->
+			{% endfor %}
+
+		</div>
+	</div>
+	<div class="row justify-content-center">
+	    <div class="col-auto">
+	        <a href="/projetos" class="btn-default">Veja todos os nossos projetos</a>
+	    </div>
+	</div>
+</section> <!-- end portfolio -->

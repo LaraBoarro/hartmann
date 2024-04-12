@@ -1,0 +1,10 @@
+name: Categorias
+form: $/crowtech/portfolio/models/categorias/fields.yaml
+modelClass: Crowtech\Portfolio\Models\Categorias
+defaultRedirect: crowtech/portfolio/categorias
+create:
+    redirect: 'crowtech/portfolio/categorias/update/:id'
+    redirectClose: crowtech/portfolio/categorias
+update:
+    redirect: crowtech/portfolio/categorias
+    redirectClose: crowtech/portfolio/categorias

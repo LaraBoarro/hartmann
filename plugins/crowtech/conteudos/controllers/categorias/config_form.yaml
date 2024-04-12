@@ -1,0 +1,10 @@
+name: Categorias
+form: $/crowtech/conteudos/models/categorias/fields.yaml
+modelClass: Crowtech\Conteudos\Models\Categorias
+defaultRedirect: crowtech/conteudos/categorias
+create:
+    redirect: 'crowtech/conteudos/categorias/update/:id'
+    redirectClose: crowtech/conteudos/categorias
+update:
+    redirect: crowtech/conteudos/categorias
+    redirectClose: crowtech/conteudos/categorias

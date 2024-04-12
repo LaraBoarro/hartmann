@@ -1,0 +1,32 @@
+[builderList builderListBannerSobre]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderListBannerSobre.records %}
+{% set displayColumn = builderListBannerSobre.displayColumn %}
+{% set noRecordsMessage = builderListBannerSobre.noRecordsMessage %}
+{% set detailsPage = builderListBannerSobre.detailsPage %}
+{% set detailsKeyColumn = builderListBannerSobre.detailsKeyColumn %}
+{% set detailsUrlParameter = builderListBannerSobre.detailsUrlParameter %}
+
+
+    {% for record in records %}
+    
+
+<!--end page-header-->
+<div id="page-content">
+  <div class="header-background bg-transfer overlay bg-fixed">
+    <div class="container">
+      <div class="title">
+        <h1>{{ this.page.title }}</h1>
+      </div>
+    </div>
+    <img src="{{record.bannernos.path}}" alt="" />
+  </div>
+      {% endfor %}

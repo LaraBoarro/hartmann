@@ -1,0 +1,39 @@
+[builderList builderListEquipezinha]
+modelClass = "Crowtech\Equipe\Models\Equipe"
+scope = "-"
+scopeValue = 1
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set equipe = builderListEquipezinha.records %}
+{% set displayColumn = builderListEquipezinha.displayColumn %}
+{% set noRecordsMessage = builderListEquipezinha.noRecordsMessage %}
+{% set detailsPage = builderListEquipezinha.detailsPage %}
+{% set detailsKeyColumn = builderListEquipezinha.detailsKeyColumn %}
+{% set detailsUrlParameter = builderListEquipezinha.detailsUrlParameter %}
+
+
+
+
+<div class="col-md-12 justificarCarouselProjeto">
+            <div class="row bord">
+              <div class="col-md-12 col-12 brands justificarCarouselProjeto">
+                <span class="popup-multi-galleria gradient-border-bottom">
+                  <div class="featured-pessoal-carouseel">
+                    {% for equipeSobre in equipe %}
+                    <div class="popup-multi-gallery">
+                      <div class="slide gallery-row">
+                        <a href="{{equipeSobre.foto_pessoa.path}}" class="lightbox-item mr-20">
+                          <img class="imagemslide" src="{{equipeSobre.foto_pessoa.path}}" alt="imagem" />
+                      </div>
+                      </a>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>

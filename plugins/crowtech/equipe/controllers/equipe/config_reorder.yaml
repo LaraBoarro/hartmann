@@ -1,0 +1,5 @@
+title: Equipe
+modelClass: Crowtech\Equipe\Models\Equipe
+nameFrom: titulo
+toolbar:
+    buttons: reorder_toolbar

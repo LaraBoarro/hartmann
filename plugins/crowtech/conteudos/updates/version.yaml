@@ -1,0 +1,35 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table crowtech_conteudos_sobrenos'
+    - builder_table_create_crowtech_conteudos_sobrenos.php
+1.0.3:
+    - 'Updated table crowtech_conteudos_sobrenos'
+    - builder_table_update_crowtech_conteudos_sobrenos.php
+1.0.4:
+    - 'Created table crowtech_conteudos_projetos'
+    - builder_table_create_crowtech_conteudos_projetos.php
+1.0.5:
+    - 'Updated table crowtech_conteudos_projetos'
+    - builder_table_update_crowtech_conteudos_projetos.php
+1.0.6:
+    - 'Updated table crowtech_conteudos_sobrenos'
+    - builder_table_update_crowtech_conteudos_sobrenos_2.php
+1.0.7:
+    - 'Updated table crowtech_conteudos_sobrenos'
+    - builder_table_update_crowtech_conteudos_sobrenos_3.php
+1.0.8:
+    - 'Updated table crowtech_conteudos_sobrenos'
+    - builder_table_update_crowtech_conteudos_sobrenos_4.php
+1.0.9:
+    - 'Created table crowtech_conteudos_categorias'
+    - builder_table_create_crowtech_conteudos_categorias.php
+1.0.10:
+    - 'Updated table crowtech_conteudos_projetos'
+    - builder_table_update_crowtech_conteudos_projetos_2.php
+1.0.11:
+    - 'Updated table crowtech_conteudos_projetos'
+    - builder_table_update_crowtech_conteudos_projetos_3.php
+1.0.12:
+    - 'Updated table crowtech_conteudos_projetos'
+    - builder_table_update_crowtech_conteudos_projetos_4.php

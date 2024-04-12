@@ -1,0 +1,10 @@
+name: Clientes
+form: $/crowtech/clientes/models/clientes/fields.yaml
+modelClass: Crowtech\Clientes\Models\Clientes
+defaultRedirect: crowtech/clientes/clientes
+create:
+    redirect: 'crowtech/clientes/clientes/update/:id'
+    redirectClose: crowtech/clientes/clientes
+update:
+    redirect: crowtech/clientes/clientes
+    redirectClose: crowtech/clientes/clientes

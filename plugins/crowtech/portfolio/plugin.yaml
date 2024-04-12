@@ -1,0 +1,16 @@
+plugin:
+    name: 'crowtech.portfolio::lang.plugin.name'
+    description: 'crowtech.portfolio::lang.plugin.description'
+    author: crowtech
+    icon: oc-icon-building-o
+    homepage: ''
+navigation:
+    main-menu-item-Portfolio:
+        label: Portfolio
+        url: crowtech/portfolio/portfolio
+        icon: icon-building
+        sideMenu:
+            side-menu-item-categorias:
+                label: Categorias
+                url: crowtech/portfolio/categorias
+                icon: icon-sitemap

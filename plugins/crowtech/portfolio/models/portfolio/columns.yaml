@@ -1,0 +1,47 @@
+columns:
+    titulo:
+        label: titulo
+        type: text
+        searchable: true
+    valor:
+        label: valor
+        type: text
+        searchable: true
+    data:
+        label: data
+        type: text
+        searchable: true
+    cliente:
+        label: cliente
+        type: text
+        searchable: true
+    descricao:
+        label: descricao
+        type: text
+        searchable: true
+    cidade:
+        label: cidade
+        type: text
+        searchable: true
+    detalhe:
+        label: detalhe
+        type: text
+        searchable: true
+    slug:
+        label: slug
+        type: text
+        searchable: true
+    categoria_id:
+        label: categoria_id
+        type: number
+        searchable: true
+        relation: categoria
+        valueFrom: name
+    ano:
+        label: ano
+        type: text
+        searchable: true
+    area:
+        label: area
+        type: text
+        searchable: true

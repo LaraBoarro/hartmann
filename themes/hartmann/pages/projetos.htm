@@ -1,0 +1,67 @@
+title = "Projetos"
+url = "/projetos"
+layout = "default"
+is_hidden = 0
+
+[builderDetails infos]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+identifierValue = 1
+modelKeyColumn = "id"
+displayColumn = "id"
+notFoundMessage = "Registro não encontrado"
+
+[builderList projetos]
+modelClass = "Crowtech\Conteudos\Models\Projeto"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList categorias]
+modelClass = "Crowtech\Conteudos\Models\Categorias"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set infos = infos.record %}
+{% partial 'componentes/breadcrumb' infos=infos.bannerportfolio %}
+
+
+{% set projetos = projetos.records %}
+<!-- Portfolio -->
+<section class="section-wrap">
+	<div class="container-fluid container-semi-fluid">			
+
+		<!-- Filter -->
+		<div class="masonry-filter text-center">
+			<a href="#" class="filter active" data-filter="*">Todos</a>
+			{% set categorias = categorias.records %}
+			{% for categoria in categorias %}
+			    <a href="#" class="filter" data-filter=".{{categoria.slug}}">{{categoria.nome}}</a>
+			{% endfor %}
+			
+		
+		</div> <!-- end filter -->
+
+		<div class="row masonry-grid">
+        
+            {% for projeto in projetos %}
+			<div class="masonry-item col-lg-3 project hover-trigger {{projeto.categoria.slug}}">
+				<div class="project__container">
+					<a href="/projeto/{{projeto.slug}}" style="background-image: url({{projeto.imagemprincipal|media}});">
+						<p class="project__title">{{projeto.nome}}</p>
+					</a>            
+				</div> 
+			</div> <!-- end project -->
+			{% endfor %}
+
+		</div>
+	</div>
+</section> <!-- end portfolio -->

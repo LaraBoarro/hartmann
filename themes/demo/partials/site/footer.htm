@@ -1,0 +1,74 @@
+[builderList builderListFooter]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+scope = "-"
+scopeValue = 1
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = builderListFooter.records %} {% set displayColumn =
+builderListFooter.displayColumn %} {% set noRecordsMessage =
+builderListFooter.noRecordsMessage %} {% set detailsPage = builderListFooter.detailsPage %}
+{% set detailsKeyColumn = builderListFooter.detailsKeyColumn %} {% set
+detailsUrlParameter = builderListFooter.detailsUrlParameter %} {% for record in
+records %}
+
+<footer id="page-footer">
+  <div class="footer-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-3">
+          <a href="{{'home'| page}}" class="logo logoDesktop"
+            ><img class="imagemTesteLogoo" src="{{record.logo.path}}" alt=""
+          /></a>
+          <a href="{{'home'| page}}" class="logo logoMobile"
+            ><img class="imagemTesteLogo" src="{{record.logomobile.path}}" alt=""
+          /></a>
+          <div class="separator"></div>
+          <p>
+         {{record.sobre | raw}}
+          </p>
+        </div>
+        <div class="col-md-1 col-sm-2">
+          <h3>Navegação</h3>
+          <div class="separator"></div>
+          <ul class="list-unstyled">
+            <li><a class="linksFooter" href="{{ 'home'|page }}">Home</a></li>
+            <li><a class="linksFooter" href="{{ 'sobre'|page }}">Sobre nós</a></li>
+            <li><a class="linksFooter" href="{{ 'portifolio'|page }}">Portfolio</a></li>
+            <li><a class="linksFooter" href="{{ 'blog'|page }}">Blog</a></li>
+            <li><a class="linksFooter" href="{{ 'contato'|page }}">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <h3>Contato</h3>
+          <div class="separator"></div>
+            <ul class="list-unstyled">
+            <li><a href="{{record.linknumeroum}}"><img class="iconesFooter" src="{{'assets/images/phone.png'|theme}}" alt="imagem" />{{record.numeroum}}</a></li>
+            <li><a href="{{record.linkemail}}"><img class="iconesFooter" src="{{'assets/images/gmail.png'|theme}}" alt="imagem" />{{record.email}}</a></li>
+            <li><a href="{{record.linkinsta}}"><img class="iconesFooter" src="{{'assets/images/instagram.png'|theme}}" alt="imagem" />{{record.insta}}</a></li>
+            <li><a href="{{record.linkface}}"><img class="iconesFooter" src="{{'assets/images/face.png'|theme}}" alt="imagem" />{{record.face}}</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <h3>Localização</h3>
+          <div class="map-wrapper">
+            <div class="mapinha">
+              {{record.mapinha|raw}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <div class="container">
+      © <script>document.write(new Date().getFullYear())</script> <span style="color: #ed3a3f">Hartmann</span> Arquitetos e
+      Associados. Cnpj: 95.358.255/0001-37. Desenvolvido por
+      <span style="color: #3e4095">CrowTech</span>
+    </div>
+  </div>
+</footer>
+{% endfor %}

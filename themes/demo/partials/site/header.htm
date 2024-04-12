@@ -1,0 +1,52 @@
+[builderList builderListHeader]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+scope = "-"
+scopeValue = 1
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+<?php
+function onStart()
+{
+    $this['backendUrl'] = Backend::url('/');
+}
+?>
+==
+{% set records = builderListHeader.records %}
+{% set displayColumn = builderListHeader.displayColumn %}
+{% set noRecordsMessage = builderListHeader.noRecordsMessage %}
+{% set detailsPage = builderListHeader.detailsPage %}
+{% set detailsKeyColumn = builderListHeader.detailsKeyColumn %}
+{% set detailsUrlParameter = builderListHeader.detailsUrlParameter %}
+    {% for record in records %}
+{% partial 'components/Navegacao' %}
+<div id="page-header">
+  <header>
+    <div class="navigation">
+      <div class="left">
+        <a href="{{ 'home'|page }}" class="brand"
+          ><img
+            class="imagemTesteLogo"
+            src="{{record.logo.path}}"
+            alt=""
+        /></a>
+      </div>
+      <!--end left-->
+      <div class="right">
+        <div class="nav-btn">
+          <figure></figure>
+          <figure></figure>
+          <figure></figure>
+        </div>
+      </div>
+      <!--end right-->
+    </div>
+    <!--end navigation-->
+  </header>
+  <!--end header-->
+</div>
+<!--end page-header-->
+{% endfor %}

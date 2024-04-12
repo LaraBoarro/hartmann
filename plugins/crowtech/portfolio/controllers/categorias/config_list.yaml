@@ -1,0 +1,12 @@
+title: Categorias
+modelClass: Crowtech\Portfolio\Models\Categorias
+list: $/crowtech/portfolio/models/categorias/columns.yaml
+recordUrl: 'crowtech/portfolio/categorias/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

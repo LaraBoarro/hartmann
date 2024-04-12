@@ -1,0 +1,20 @@
+fields:
+    foto_pessoa:
+        label: 'Foto da pessoa'
+        mode: image
+        imageWidth: '250'
+        imageHeight: '250'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    titulo:
+        label: 'Nome da pessoa'
+        span: auto
+        type: text
+    cargo:
+        label: 'Cargo / Setor'
+        span: auto
+        type: text

@@ -1,0 +1,160 @@
+title = "Contato"
+url = "/contato"
+layout = "default"
+is_hidden = 0
+
+[builderList builderListContato]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+scope = "-"
+scopeValue = 1
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[genericForm]
+messages_success = "Seu formulário foi enviado com sucesso"
+messages_errors = "Ocorreu um erro no envio"
+mail_enabled = 1
+mail_recipients[] = "contato@hartmannarquitetura.com.br"
+mail_resp_field = "contato@hartmannarquitetura.com.br"
+mail_resp_from = "contato@hartmannarquitetura.com.br"
+inline_errors = "variable"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+{% set contato = builderListContato.records %}
+{% set displayColumn = builderListContato.displayColumn %}
+{% set noRecordsMessage = builderListContato.noRecordsMessage %}
+{% set detailsPage = builderListContato.detailsPage %}
+{% set detailsKeyColumn = builderListContato.detailsKeyColumn %}
+{% set detailsUrlParameter = builderListContato.detailsUrlParameter %}
+
+    {% for contatoPage in contato %}
+<div class="fundocinzapages">
+{% partial 'components/mapa' %}
+  <!--end header-background-->
+  <div class="block">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <h2><strong>Contatos</strong></h2>
+        </div>
+        <!--end col-md-4-->
+        <div class="col-md-8 col-sm-8">
+          <p>
+           {{contatoPage.frase}}
+          </p>
+          <div class="separator"></div>
+          <!--end separator-->
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <h4><strong>Unidade de Foz do Iguaçu</strong></h4>
+              <figure><a href="{{contatoPage.linknumeroum}}"><img class="iconesFooter" src="{{'assets/images/phone.png'|theme}}" alt="imagem" />{{contatoPage.numeroum}}</a></figure>
+              <figure><a href="{{contatoPage.linkemail}}"><img class="iconesFooter" src="{{'assets/images/gmail.png'|theme}}" alt="imagem" />{{contatoPage.emailum}}</a></figure>
+              <figure><img class="iconesFooter" src="{{'assets/images/local.png'|theme}}" alt="imagem" />{{contatoPage.enderecoum}}</figure>
+              <br />
+            <!--   <address>
+              4877 Spruce Drive
+              <br />
+              West Newton, PA 15089
+            </address> -->
+            </div>
+            <div class="col-md-6 col-sm-2">
+              <h4><strong>Unidade de Itapema</strong></h4>
+              <figure><a href="{{contatoPage.linknumerodois}}"><img class="iconesFooter" src="{{'assets/images/phone.png'|theme}}" alt="imagem" />{{contatoPage.numerodois}}</a></figure>
+              <figure><a href="{{contatoPage.linkemaildois}}"><img class="iconesFooter" src="{{'assets/images/gmail.png'|theme}}" alt="imagem" />{{contatoPage.emaildois}}</a></figure>
+              <figure><img class="iconesFooter" src="{{'assets/images/local.png'|theme}}" alt="imagem" />{{contatoPage.enderecodois}}</figure>
+            </div>
+          </div>
+        </div>
+        <!--end col-md-8-->
+      </div>
+      <!--end row-->
+    </div>
+    <!--end container-->
+  </div>
+  <!--end block-->
+
+  <div class="block stick-to-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2><strong>Formulário de Contato</strong></h2>
+        </div>
+        <div class="col-md-8">
+         <form  id="form-contact" class="labels-uppercase clearfix" data-request="{{ genericForm }}::onFormSubmit">
+                {{ form_token() }}
+                <div id="{{ genericForm }}_forms_flash"></div>
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                  <label for="form-contact-name">Seu Nome<em>*</em></label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="form-contact-name"
+                    minlength="3"
+                    name="name"
+                    placeholder="Nome"
+                    required
+                  />
+                </div>
+              </div>
+              <!--end col-md-6-->
+              <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                  <label for="form-contact-email">Seu Email<em>*</em></label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    minlength="3"
+                    id="form-contact-email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+              </div>
+              <!--end col-md-6-->
+            </div>
+            <!--end row-->
+            <div class="form-group">
+              <label for="form-contact-message">Sua Mensagem<em>*</em></label>
+              <textarea
+                class="form-control"
+                id="form-contact-message"
+                rows="8"
+                minlength="3"
+                name="message"
+                required
+                placeholder="Mensagem"
+              ></textarea>
+            </div>
+            <!--end form-group-->
+            <div class="form-group pull-right">
+              <button type="submit" class="btn btn-primary">
+                Enviar Mensagem
+              </button>
+            </div>
+            <!--end form-group-->
+          </form>
+          <!--end form-->
+        </div>
+        <!--end col-md-8-->
+      </div>
+      <!--end row-->
+    </div>
+    <!--end container-->
+    <div class="bg black opacity-2"></div>
+    <!--end bg-->
+  </div>
+  <!--end block-->
+ </div>
+  {% endfor %}
+</div>

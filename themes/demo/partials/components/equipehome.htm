@@ -1,0 +1,36 @@
+[builderList builderListequipehome]
+modelClass = "Crowtech\Equipe\Models\Equipe"
+scope = "-"
+scopeValue = 1
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+recordsPerPage = 3
+pageNumber = "{{ :page }}"
+==
+{% set equipeHomeRecord = builderListequipehome.records %}
+{% set displayColumn = builderListequipehome.displayColumn %}
+{% set noRecordsMessage = builderListequipehome.noRecordsMessage %}
+{% set detailsPage = builderListequipehome.detailsPage %}
+{% set detailsKeyColumn = builderListequipehome.detailsKeyColumn %}
+{% set detailsUrlParameter = builderListequipehome.detailsUrlParameter %}
+
+<div class="container">
+<div class="section-title">
+      <a href="{{"sobre"|page}}"><h2>NOSSA EQUIPE</h2></a>
+    </div>
+    <div class="row">
+    {% for equipeHome in equipeHomeRecord %}
+      <div class="col-12 col-md-4 centralizarIcones">
+                    <img class="EquipeHome" src="{{equipeHome.foto_pessoa.path}}" alt="" />
+                <!--end left-->
+                  <div class="social espacoIcones">
+                    <h2 class="tituloEquipe">{{equipeHome.titulo}}</h2>
+                    <p class="textoEquipe">{{equipeHome.cargo}}</p>
+                  </div>
+                </div>
+              <!--end person-->
+    {% endfor %}
+        </div>
+    </div>

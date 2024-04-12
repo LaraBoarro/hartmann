@@ -1,0 +1,11 @@
+plugin:
+    name: 'crowtech.equipe::lang.plugin.name'
+    description: 'crowtech.equipe::lang.plugin.description'
+    author: crowtech
+    icon: oc-icon-slideshare
+    homepage: ''
+navigation:
+    main-menu-item-equipe:
+        label: Equipe
+        url: crowtech/equipe/equipe
+        icon: icon-slideshare

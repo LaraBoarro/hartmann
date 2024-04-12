@@ -1,0 +1,23 @@
+[builderList builderListwpp]
+modelClass = "Crowtech\Informacoes\Models\Informacoes"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set wpp = builderListwpp.records %}
+{% set displayColumn = builderListwpp.displayColumn %}
+{% set noRecordsMessage = builderListwpp.noRecordsMessage %}
+{% set detailsPage = builderListwpp.detailsPage %}
+{% set detailsKeyColumn = builderListwpp.detailsKeyColumn %}
+{% set detailsUrlParameter = builderListwpp.detailsUrlParameter %}
+
+
+    {% for wppPages in wpp %}
+    
+      <a class="wppLink" href="{{wppPages.linknumeroum}}"><img class="wppImage" src="{{'assets/images/wpp.png'|theme}}" alt="imagemWpp"></a>
+      
+    {% endfor %}

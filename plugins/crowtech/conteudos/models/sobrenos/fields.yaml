@@ -1,0 +1,46 @@
+tabs:
+    fields:
+        descricao:
+            label: Descrição
+            size: ''
+            span: full
+            type: textarea
+            tab: 'Sobre Nós'
+        imagemlateral1:
+            label: 'Imagem Lateral'
+            mode: image
+            imageWidth: '200'
+            imageHeight: '200'
+            span: auto
+            type: mediafinder
+            tab: 'Sobre Nós'
+        icones:
+            label: Números
+            prompt: 'Acrescentar novo item'
+            style: default
+            span: full
+            type: repeater
+            tab: 'Sobre Nós'
+            form:
+                fields:
+                    numero:
+                        label: Número
+                        span: auto
+                        type: text
+                    texto:
+                        label: Texto
+                        span: auto
+                        type: text
+                    icone:
+                        label: Ícone
+                        mode: image
+                        imageWidth: '200'
+                        imageHeight: '200'
+                        span: auto
+                        type: mediafinder
+        conteudo:
+            label: Conteúdo
+            size: ''
+            span: full
+            type: richeditor
+            tab: 'Sobre Nós'
